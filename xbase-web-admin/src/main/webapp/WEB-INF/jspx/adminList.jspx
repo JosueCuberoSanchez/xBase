@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Plataforma de ejercicios xBase" />
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases" />
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/plugins.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleUsersList.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    </head>
+
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li><div>|</div></li>
+            <li><a href="${pageContext.request.contextPath}/admin/admin.html">Cuenta</a></li><!--Averiguar id de quien lo esta usando-->
+            <li><a  href="${pageContext.request.contextPath}/admin/dashboard.html">Página Principal</a></li>
+            <li></li>
+        </ul>
+    </nav>
+    <div class="navD">
+        <a class="submenSel">Admins</a>
+        <a href="${pageContext.request.contextPath}/admin/studentList.html" class="submen" >Estudiantes</a>
+    </div>
+
+    <form action="${pageContext.request.contextPath}/admin/adminList.html">
+        <input type="text" name="search" placeholder="Buscar" />
+    </form>
+
+    <br><!-- --></br>
+    <div class="admin">
+    <div class="row">
+        <div class="col-lg-6 col-xs-12 col-sm-12" id="col">
+            <!-- -->
+            <c:forEach items="${adminList}" var="admin">
+                <a class="results" href="${pageContext.request.contextPath}/admin/admin.html?id=${admin.id}">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="portlet_comments_1">
+                            <div class="mt-comments">
+                                <div class="mt-comment">
+                                    <div class="mt-comment-body">
+                                        <div class="mt-comment-info">
+                                            <span class="mt-comment-author">${admin.name} ${admin.lastName}
+                                                ${admin.secondLastName},
+                                                ${admin.username}</span>
+                                            <span class="mt-comment-date">Administrator</span>
+                                            <br><!-- --></br>
+                                            <span class="mt-comment-author"> Último acceso: ${admin.lastLoginTimestamp} </span>
+                                        </div>
+                                        <div class="mt-comment-details">
+                                            <span class="mt-comment-status mt-comment-status-pending">${admin.status}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <br><!-- --></br>
+            </c:forEach>
+            <!-- -->
+        </div>
+    </div>
+    </div>
+    </body>
+    </html>
+</jsp:root>

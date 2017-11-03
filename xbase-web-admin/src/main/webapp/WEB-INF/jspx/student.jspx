@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cuenta Estudiante</title>
+        <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Preview page of Metronic Admin Theme #1 for user account page" name="description"/>
+        <meta content="" name="author"/>
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <!-- 700&sub -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/Javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/componentss.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/plugins.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <!-- BEGIN PAGE LEVEL STYLES -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/profile.min.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL STYLES -->
+        <!-- BEGIN THEME LAYOUT STYLES -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/styleStudentInfo.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME LAYOUT STYLES -->
+        <!--<link rel="shortcut icon" href="favicon.ico" />-->
+    </head>
+    <!-- END HEAD -->
+
+    <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white page-sidebar-closed">
+    <!--<jsp:declaration>String estado; </jsp:declaration>
+    <jsp:declaration>boolean habilitado;</jsp:declaration>-->
+
+    <div class="page-wrapper">
+
+
+        <!-- BEGIN PAGE TITLE-->
+        <header id="header" class="header-main">
+            <!-- Begin Navbar -->
+            <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+                <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+            </a>
+            <nav class="navhead">
+                <ul class="ulhead">
+                    <li class="li1"><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+                    <li class="li2"><div class="div2">|</div></li>
+                    <!--<li class="li0"><a href="${pageContext.request.contextPath}/admin/editStudentInfo.html?id=${student.id}">Editar</a></li>-->
+                    <li class="li0"><a href="${pageContext.request.contextPath}/admin/StatisticsStudentsInfo.html?id=${student.id}">Estadísticas</a></li>
+                    <li class="selectedmen"><a href="${pageContext.request.contextPath}/admin/dashboard.html">Página principal</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br/>
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BEGIN PROFILE SIDEBAR -->
+
+                <!-- END BEGIN PROFILE SIDEBAR -->
+                <!-- BEGIN PROFILE CONTENT -->
+                <div class="profile-content">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portlet light ">
+                                <div class="portlet-title tabbable-line">
+                                    <div class="caption caption-md">
+                                        <i class="icon-globe theme-font hide"><!-- --></i>
+                                        <span class="cuentaTexto">Cuenta</span>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#tab_1_1" data-toggle="tab">Información personal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <form action="${pageContext.request.contextPath}/admin/saveStudentChanges.html?id=${student.id}" method="post">
+                                    <div class="portlet-body">
+
+                                        <!--<div class="dropdown">
+                                            <button onclick="myFunction()" class="dropbtn">Cambiar Estado</button>
+                                            <div id="myDropdown" class="dropdown-content">
+
+                                                <a href="#" onclick="changeToActive()" >Activo</a>
+                                                <a href="#" onclick="changeToInactive()" >Inactivo</a>
+                                                <a href="#" onclick="changeToSuspended()" >Suspendido</a>
+
+                                            </div>
+                                        </div>-->
+
+                                        <div class="tab-content">
+                                            <!-- PERSONAL INFO TAB -->
+                                            <div class="tab-pane active" id="tab_1_1">
+
+                                                <div class="form-group">
+                                                    <label class="control-label">Primer Nombre</label>
+                                                    <br/>
+                                                    <div class="text-box">${student.name}</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Apellido</label>
+                                                    <br/>
+                                                    <div class="text-box">${student.lastName}</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Segundo Apellido</label>
+                                                    <br/>
+                                                    <div class="text-box">${student.secondLastName}</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Email</label>
+                                                    <br/>
+                                                    <div class="text-box">${student.username}</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Fecha de Nacimiento</label>
+                                                    <br/>
+                                                    <div class="text-box">${student.birthDate.toString().substring(0, 10)}</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Habilitado</label>
+                                                    <div class="container">
+
+                                                        <div>
+                                                            <c:choose>
+                                                                <c:when test="${student.enabled}">
+                                                                    <input type="checkbox" id="rounded" name="enabled" value="true" checked="checked"/>
+                                                                    <input type="hidden" name="enabled" value="false"/>
+                                                                </c:when>
+                                                                <c:otherwise>
+                                                                    <input type="checkbox" id="rounded" name="enabled" value="true"/>
+                                                                    <input type="hidden" name="enabled" value="false" checked="checked"/>
+                                                                </c:otherwise>
+                                                            </c:choose>
+
+                                                            <label for="rounded"><!-- --></label>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Estado</label>
+                                                    <br/>
+
+                                                    <select id="choice" name="status" class="text-box3">
+                                                        <c:choose>
+                                                            <c:when test="${student.status eq 'ACTIVE'}">
+                                                                <option  class="text-box2" name="status" value="ACTIVE">Activo</option>
+                                                                <option  class="text-box2" name="status" value="INACTIVE">Inactivo</option>
+                                                                <option  class="text-box2" name="status" value="SUSPENDED">Suspendido</option>
+                                                            </c:when>
+                                                            <c:when test="${student.status  eq 'INACTIVE'}">
+                                                                <option  class="text-box2" name="status" value="INACTIVE">Inactivo</option>
+                                                                <option  class="text-box2" name="status" value="ACTIVE">Activo</option>
+                                                                <option  class="text-box2" name="status" value="SUSPENDED">Suspendido</option>
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <option  class="text-box2" name="status" value="SUSPENDED">Suspendido</option>
+                                                                <option  class="text-box2" name="status" value="INACTIVE">Inactivo</option>
+                                                                <option  class="text-box2" name="status" value="ACTIVE">Activo</option>
+                                                            </c:otherwise>
+                                                        </c:choose>
+                                                    </select>
+
+                                                        <input type="submit" value="Guardar Cambios" class="save"><!----></input>
+
+
+
+                                                </div>
+                                                <br/>
+
+                                            </div>
+
+
+
+
+                                            <!-- END PERSONAL INFO TAB -->
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PROFILE CONTENT -->
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT BODY -->
+
+    <script type="text/javascript">
+        /* When the user clicks on the button,
+         toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i &lt; dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function changeToFalse()
+        {
+
+            document.getElementsByName('enable').value = false;
+
+        }
+
+        function changeToTrue()
+        {
+
+            document.getElementsByName('disable').value = true;
+
+        }
+
+        function changeToActive() {
+            document.getElementById('state1').value = "Activo";
+
+        }
+
+        function changeToInactive() {
+            document.getElementById('state2').value = "Inactivo";
+
+        }
+
+        function changeToSuspended() {
+            document.getElementById('state3').value = "Suspendido";
+
+        }
+
+    </script>
+
+
+    <script src="${pageContext.request.contextPath}/assets/Javascript/jquery.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/js.cookie.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/jquery.slimscroll.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/jquery.blockui.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/bootstrap-switch.min.js" type="text/javascript"><!-- --></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="${pageContext.request.contextPath}/assets/Javascript/bootstrap-fileinput.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/jquery.sparkline.min.js" type="text/javascript"><!-- --></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="${pageContext.request.contextPath}/assets/Javascript/app.min.js" type="text/javascript"><!-- --></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="${pageContext.request.contextPath}/assets/Javascript/profile.min.js" type="text/javascript"><!-- --></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="${pageContext.request.contextPath}/assets/Javascript/layout.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/demo.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/quick-sidebar.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/quick-nav.min.js" type="text/javascript"><!-- --></script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+    </body>
+
+    </html>
+</jsp:root>
+

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>xBase</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+    </script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="Plataforma de ejercicios xBase"/>
+    <meta name="keywords" content="xBase, Ejercicios, UCR, Bases"/>
+    <link rel="shortcut icon" href="favicon.ico" type="images/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="CSS/styleExercise.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+<body class="homepage">
+<img src="Resources/Images/LogoAdminMin.png" alt="" class="logo"/>
+<nav class="nav">
+    <ul>
+        <li><a href="LoginSa.html">Logout</a></li>
+        <li>
+            <div>|</div>
+        </li>
+        <li><a href="#">Account</a></li>
+        <li><a href="Dashboardads.html">Dashboard</a></li>
+        <li><a href="#">Statistics</a></li>
+    </ul>
+</nav>
+<div class="parallax" id="ht">
+    <div id="group1" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <a id="cancel" href="#" onclick="window.history.back();" title="Cancel"><img
+                    src="Resources/Images/Edit.png"/> </a>
+            <section class="fullamount">
+                <div class="exer">"Si te lo hiciera, te desgarraría con mis zarpas,
+
+                    pero eso sólo ocurrirá si no lo captas.
+
+                    Y no es fácil la respuesta de esta adivinanza,
+
+                    porque está lejana, en tierras de bonanza,
+
+                    donde empieza la región de las montañas de arena
+
+                    y acaba la de los toros, la sangre, el mar y la verbena.
+
+                    Y ahora contesta, tú, que has venido a jugar:
+
+                    ¿A qué animal no te gustaría besar? "
+                </div>
+            </section>
+            <a href="#ht"><img id="id1" onClick="smoothScroll(document.getElementById('group2'))"
+                               src="Resources/Images/AnswerDown.png" alt=""/></a>
+            <div id="info">
+                <div id="tpinfo">
+                    <div class="topcont">
+                        <div class="difficultyE">
+                        </div>
+                        <div class="SOLVED">
+                            SOLVED
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span>☆</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    Themes:
+                </div>
+                <div id="temas">
+                    <div class="theme">
+                        Calculo 1
+                    </div>
+                    <div class="theme">
+                        Investigación de O
+                    </div>
+                    <div class="theme">
+                        Tema 4
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="group2" class="parallax__group group2">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="tit">The
+                <div style="font-size: 0.4em; display: inline-block;">procedure</div>
+            </div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+            <img src="Resources/Images/Background.jpg" alt="" class="ip"/>
+        </div>
+    </div>
+    <div id="group3" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="proc">
+                La respuesta está donde empieza la región de las montañas de arena y acaba la de los toros, la sangre,
+                el mar y la verbena.
+
+                El país de los toros, la sangre, el mar y la verbena podría ser España, y la región de las montañas de
+                arena podría ser Marruecos, el Magreb, Arabia. Donde acaba España y empieza Marruecos podría ser el
+                estrecho de Gibraltar.
+
+                Claro que Marruecos y Magreb empiezan por «ma», Arabia lo hace por «ara», y España acaba en «ña». Y si
+                me lo hace, si se da maña, no, si me araña... ¿qué animal no me gustaría besar?»
+            </div>
+        </div>
+    </div>
+    <div id="group4" class="parallax__group group2">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="tit">The
+                <div style="font-size: 0.4em; display: inline-block;">answer</div>
+            </div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+            <img src="Resources/Images/Background.jpg" alt="" class="ip"/>
+        </div>
+    </div>
+    <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="sol">
+                "La araña"
+            </div>
+            <div class="end">
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+
+</script>
+</body>
+</html>

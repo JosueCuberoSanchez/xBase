@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd" default-init-method="init">
+    <!--  Web and user base Web Services  -->
+    <security:authentication-manager alias="authenticationManager">
+        <security:authentication-provider ref="adminAuthenticationProvider"/>
+    </security:authentication-manager>
+    <security:http use-expressions="false" pattern="/**/*" auto-config="true">
+        <security:form-login default-target-url="/admin/dashboard.html"
+                             always-use-default-target="true" login-page="/login.html"
+                             login-processing-url="/ws/login" authentication-failure-url="/login.html?error=true"
+                             password-parameter="password"
+                             username-parameter="username"/>
+        <security:logout logout-url="/logout.html" logout-success-url="/login.html" delete-cookies="JSESSIONID"/>
+        <!--
+         Added this for testing only, should be removed for the final delivery
+        -->
+        <security:remember-me key="xBaseKey" user-service-ref="administratorService"/>
+        <security:intercept-url pattern="/index.html" access="ROLE_ANONYMOUS"/>
+        <security:intercept-url pattern="/login.html" access="ROLE_ANONYMOUS"/>
+        <security:intercept-url pattern="/forgotPassword.html" access="ROLE_ANONYMOUS"/>
+        <security:intercept-url pattern="/aboutLoginRegister.html" access="ROLE_ANONYMOUS"/>
+        <security:intercept-url pattern="/ws/login/**/*" access="ROLE_ANONYMOUS"/>
+        <security:intercept-url pattern="/ws/login" access="ROLE_ANONYMOUS"/>
+        <security:intercept-url pattern="/ws/admin/**/*" access="ROLE_ADMIN"/>
+        <security:intercept-url pattern="/assets/**" access="ROLE_ANONYMOUS, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/**/*" access="ROLE_ADMIN"/>
+        <security:intercept-url pattern="/manageThemes.html" access="ROLE_ADMIN"/>
+
+        <security:csrf disabled="true"/>
+    </security:http>
+</beans>

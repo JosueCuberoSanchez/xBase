@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <script type="text/javascript" async=""
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+        </script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Plataforma de ejercicios xBase"/>
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases"/>
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleExercise.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/slick/slick-theme.css"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/student/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoStudentsMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li>
+                <div>|</div>
+            </li>
+            <li><a href="${pageContext.request.contextPath}/student/about.html">Acerca de</a></li>
+            <li><a href="${pageContext.request.contextPath}/student/student.html">Cuenta</a></li>
+            <li class="selectedmen"><a href="${pageContext.request.contextPath}/student/dashboard.html">Página principal</a></li>
+            <li><a href="${pageContext.request.contextPath}/student/StatisticsStudents.html">Estadísticas</a></li>
+        </ul>
+    </nav>
+    <a href="${pageContext.request.contextPath}/student/ejercicioxBase.html?id=${exercise.id}"><p id="pdf">Generar archivo PDF</p></a>
+    <div class="parallax" id="ht">
+        <div id="group1" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <a id="cancel" href="#" onclick="window.history.back();" title="Cancel">
+                    <img src="${pageContext.request.contextPath}/assets/Images/Cancel.png"/> </a>
+                <section class="fullamount">
+                    <div class="exer">${exercise.problem}
+                    </div>
+                </section>
+                <a href="${pageContext.request.contextPath}/student/answers.html?exercise=${exercise.id}"><img id="id1" onClick="smoothScroll(document.getElementById('group2'))"
+                                   src="${pageContext.request.contextPath}/assets/Images/AnswerDown.png" alt=""/></a>
+                <div id="info">
+                    <div id="tpinfo">
+                        <div class="topcont">
+                            <c:choose>
+                                <c:when test="${exercise.difficulty eq 'EASY'}">
+                                    <div class="difficultyE"><!-- --></div>
+                                </c:when>
+                                <c:when test="${exercise.difficulty eq 'MEDIUM'}">
+                                    <div class="difficultyE"><!-- --></div>
+                                </c:when>
+                                <c:when test="${exercise.difficulty eq 'ADVANCED'}">
+                                    <div class="difficultyE"><!-- --></div>
+                                </c:when>
+                                <c:otherwise>
+                                    <div class="difficultyE"><!-- --></div>
+                                </c:otherwise>
+                            </c:choose>
+                            <div class="SOLVED">
+                                <!-- SOLVED ${exerciseState.state}--><!-- tostring-->
+                            </div>
+                        </div>
+                        <br><!-- --></br>
+                        &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                        &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp Calificacion:<div class="rating">
+                        <c:set var="rating" value="${exercise.averageRating}"/>
+                            <c:forEach begin="1" end="5" step="1" var="i">
+                                <c:choose>
+                                    <c:when test="${i le rating}" >
+                                        <span>★</span>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <span>☆</span>
+                                    </c:otherwise>
+                                </c:choose>
+                            </c:forEach>
+                        </div>
+                    </div>
+                    <div id="temas"> Temas:
+                        <c:forEach items="${exercise.topics}" var="item">
+                            <div class="theme">
+                                ${item.name}
+                            </div>
+                        </c:forEach>
+                    </div>
+                    <div id="referencias"> Referencias:
+                        <c:forEach var="reference" items="${bookReferences}">
+                            <div class="reference">
+
+                                <div>Libro</div>
+                                <div>Título: ${reference.title}</div>
+                                <div>Página: ${reference.page}</div>
+                                <div>Año: ${reference.publicationYear}</div>
+                                <div>Editorial: ${reference.editorial}</div>
+                                <div>ISBN: ${reference.isbn}</div>
+                                <div>Autor/es:</div>
+                                <c:forEach items="${reference.authors}" var="item">
+                                    <div class="theme">
+                                        ${item.name}
+                                        ${item.lastName}
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </c:forEach>
+                        <c:forEach var="reference" items="${bookletReferences}">
+                            <div class="reference">
+                                <div>Folleto</div>
+                                <div>Título: ${reference.title}</div>
+                                <div>Página: ${reference.page}</div>
+                                <div>Año: ${reference.publicationYear}</div>
+                                <div>Autor/es:</div>
+                                <c:forEach items="${reference.authors}" var="item">
+                                    <div class="theme">
+                                        ${item.name}
+                                        ${item.lastName}
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </c:forEach>
+                        <c:forEach var="reference" items="${ownReferences}">
+                            <div class="reference">
+                                <div >Elaboración Propia</div>
+                                <div>Año: ${reference.publicationYear}</div>
+                                <div>Autor/es:</div>
+                                <c:forEach items="${reference.authors}" var="item">
+                                    <div class="theme">
+                                        ${item.name}
+                                        ${item.lastName}
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </c:forEach>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+    </html>
+</jsp:root>

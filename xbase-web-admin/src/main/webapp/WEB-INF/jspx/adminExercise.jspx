@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <script type="text/javascript" async=""
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+        </script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Plataforma de ejercicios xBase"/>
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases"/>
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleExercise.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/slick/slick-theme.css"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li>
+                <div>|</div>
+            </li>
+            <li><a href="${pageContext.request.contextPath}/admin/admin.html">Cuenta</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/dashboard.html">Página Principal</a></li>
+        </ul>
+    </nav>
+	<a id="cancel" href="${pageContext.request.contextPath}/admin/editExercise.html?exerciseId=${exercise.id}" title="Edit"><img src="${pageContext.request.contextPath}/assets/Images/Edit2.png"/> </a>
+    <a href="${pageContext.request.contextPath}/admin/ejercicioxBase.html?id=${exercise.id}"><div id="pdf">Generar Pdf</div></a>
+    <div class="parallax" id="ht">
+        <div id="group1" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <section class="fullamount">
+                    <div class="exer">${exercise.problem}</div>
+                </section>
+                <a href="${pageContext.request.contextPath}/admin/answers.html?exercise=${exercise.id}"><img id="id1" onClick="smoothScroll(document.getElementById('group2'))"
+                                   src="${pageContext.request.contextPath}/assets/Images/AnswerDown.png" alt=""/></a>
+                <div id="info">
+                    <div id="tpinfo">
+                        <div class="topcont">
+                            <div class="difficultyE">
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <c:forEach begin="0" end="4" step="1" var="i">
+                                <c:choose>
+                                    <c:when test="${i ge (5 - exercise.averageRating)}">
+                                        <span>★</span>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <span>☆</span>
+                                    </c:otherwise>
+                                </c:choose>
+                            </c:forEach>
+                        </div>
+                        Themes:
+                    </div>
+                    <div id="temas">
+                        <c:forEach items="${exercise.topics}" var="topic">
+                            <div class="theme">
+                                ${topic.name}
+                            </div>
+                        </c:forEach>
+                    </div>
+                    <div id="referencias"> Referencias:
+                        <c:forEach var="reference" items="${bookReferences}">
+                            <div class="reference">
+
+                                <div>Libro</div>
+                                <div>Título: ${reference.title}</div>
+                                <div>Página: ${reference.page}</div>
+                                <div>Año: ${reference.publicationYear}</div>
+                                <div>Editorial: ${reference.editorial}</div>
+                                <div>ISBN: ${reference.isbn}</div>
+                                <div>Autor/es:</div>
+                                <c:forEach items="${reference.authors}" var="item">
+                                    <div class="theme">
+                                        ${item.name}
+                                        ${item.lastName}
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </c:forEach>
+                        <c:forEach var="reference" items="${bookletReferences}">
+                            <div class="reference">
+                                <div>Folleto</div>
+                                <div>Título: ${reference.title}</div>
+                                <div>Página: ${reference.page}</div>
+                                <div>Año: ${reference.publicationYear}</div>
+                                <div>Autor/es:</div>
+                                <c:forEach items="${reference.authors}" var="item">
+                                    <div class="theme">
+                                        ${item.name}
+                                        ${item.lastName}
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </c:forEach>
+                        <c:forEach var="reference" items="${ownReferences}">
+                            <div class="reference">
+                                <div >Elaboración Propia</div>
+                                <div>Año: ${reference.publicationYear}</div>
+                                <div>Autor/es:</div>
+                                <c:forEach items="${reference.authors}" var="item">
+                                    <div class="theme">
+                                        ${item.name}
+                                        ${item.lastName}
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </c:forEach>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+        window.smoothScroll = function(target) {
+            var scrollContainer = target;
+            do { //find scroll container
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
+
+            var targetY = 0;
+            do { //find the top of target relatively to the container
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
+
+            scroll = function(c, a, b, i) {
+                i++; if (i > 30) return;
+                c.scrollTop = a + (b - a) / 30 * i;
+                setTimeout(function(){ scroll(c, a, b, i); }, 20);
+            }
+            // start scrolling
+            scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        }
+
+    </script>
+    </body>
+    </html>
+</jsp:root>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+    <jsp:output omit-xml-declaration="true"/>
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat"/>
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Plataforma de ejercicios xBase"/>
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases"/>
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css"
+              href="${pageContext.request.contextPath}/assets/CSS/styleAddTopic.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav"><!-- -->
+        <ul><!-- -->
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li>
+                <div>|</div>
+            </li>
+            <li><a href="${pageContext.request.contextPath}/admin/admin.html">Cuenta</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/dashboard.html">Página Principal</a></li>
+        </ul>
+    </nav>
+    <section class="wrapper"><!-- -->
+        <div class="addTopicTitle"><!-- -->
+            <span class="add-texto">Agregar tema</span>
+        </div>
+        <div class="form"><!-- Mapear el parent al hijo-->
+            <form role="form" action="${pageContext.request.contextPath}/admin/manageThemes.html.html" method="post"><!-- -->
+                <div class="form-group"><!-- -->
+                    <label>Ingrese el nombre: </label>
+                    <input name="newTopicName" class="input-data"/>
+                </div>
+                <div class="form-group"><!-- -->
+                </div>
+                <input type="submit" class="submit-btn"></input>
+            </form>
+        </div>
+    </section>
+    </body>
+    </html>
+</jsp:root>

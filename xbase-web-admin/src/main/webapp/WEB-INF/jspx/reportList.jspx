@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html>
+    <head>
+        <title>xBase</title>
+        <script type="text/javascript" async=""
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+        </script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Plataforma de ejercicios xBase" />
+        <meta name="keywords" content="xBase, Resultados, UCR, Bases" />
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleReportResults.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Bad Script" rel="stylesheet"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul class="upperMenu">
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li><div>|</div></li>
+            <li><a href="${pageContext.request.contextPath}/admin/admin.html">Cuenta</a></li>
+            <li><a  href="${pageContext.request.contextPath}/admin/dashboard.html">Página Principal</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/studentList.html">Estudiantes</a></li>
+        </ul>
+    </nav><!--termina la parte de arriba-->
+
+    <input type="text" name="search" placeholder="Buscar"/>
+    <a id="settings" href="#popup1" onclick="" title="Settings"><img src="${pageContext.request.contextPath}/assets/Images/Settings.png"/></a>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <input type="number" name="search" placeholder="Results per page"/>
+            <a class="okpop" href="#">Ok</a>
+        </div>
+    </div>
+    <section id="open" class="m1">
+        <section class="rescont">
+            <div class="results">
+                <c:forEach items="${reports}" var="item">
+                    <a href="${pageContext.request.contextPath}/admin/report.html?report=${item.value.id}">
+                    <div class="enunciados"> ${item.value.explanation}</div>
+                    <div class="info">
+                        <div class="reported">Reportado por:</div>
+                        <div class="reporter">${item.value.reportingStudent.name}</div>
+                        <div class="reported">en:</div>
+                        <div class="reporter">${item.key}</div>
+                    </div>
+                    </a>
+                </c:forEach>
+            </div>
+
+
+            <!-- <div class="results">
+                    <div class="enunciados">Esta respuesta está incorrecta porque al calcular la sumatoria...</div>
+                    <div class="info">
+                        <div class="reported">Reportado por:</div>
+                        <div class="reporter">Esteban Alemán</div>
+                        <div class="reported">en:</div>
+                        <div class="reporter">Hallar el área entre las dos curvas definidas por las funciones...</div>
+                    </div>
+                </div>
+            </a><-->
+
+        </section>
+    </section>
+    </body>
+    </html>
+</jsp:root>

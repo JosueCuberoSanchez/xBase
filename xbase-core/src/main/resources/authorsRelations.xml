@@ -1,0 +1,122 @@
+	<references>
+		<ownElaboration>
+			<elabYear>2015</elabYear>
+			<authors>
+				<author>
+					<name>Ileana</name>
+					<lastName>Castillo</lastName>
+					<secondLastName>Arias</secondLastName>
+				</author>
+			</authors>
+		</ownElaboration>
+		<ownElaboration>
+			<elabYear>2016</elabYear>
+				<authors>
+					<author>
+						<name>Ileana</name>
+						<lastName>Castillo</lastName>
+						<secondLastName>Arias</secondLastName>
+					</author>
+				</authors>
+		</ownElaboration>
+		<book>
+			<title>Discrete Mathematics Elementary and Beyond</title>
+			<isbn>0-387-95584-4</isbn>
+			<year>2003</year>
+			<editorial>Springer</editorial>
+			<authors>
+				<author>
+					<name>László</name>
+					<lastName>Lovász</lastName>
+					<secondLastName></secondLastName>
+				</author>
+				<author>
+					<name>József</name>
+					<lastName>Pelikán</lastName>
+					<secondLastName></secondLastName>
+				</author>
+			</authors>
+		</book>
+		<book>
+			<title>Discrete Mathematical Structures</title>
+			<isbn>0-13-320912-1</isbn>
+			<year>1996</year>
+			<editorial>Prentice Hall</editorial>
+			<authors>
+				<author>
+					<name>Bernard</name>
+					<lastName>Kolman</lastName>
+					<secondLastName></secondLastName>
+				</author>
+				<author>
+					<name>Robert</name>
+					<lastName>Busby</lastName>
+					<secondLastName></secondLastName>
+				</author>
+				<author>
+					<name>Sharon </name>
+					<lastName>Ross</lastName>
+					<secondLastName></secondLastName>
+				</author>
+			</authors>
+		</book>
+		<book>
+			<title>Theory and Problems of Discrete Mathematics</title>
+			<isbn>0-07-151101-6</isbn>
+			<year>2007</year>
+			<editorial>McGraw-Hill</editorial>
+			<authors>
+				<author>
+					<name>Seymor</name>
+					<lastName>Lipschutz</lastName>
+					<secondLastName></secondLastName>
+				</author>
+				<author>
+					<name>Marc</name>
+					<lastName>Lipson</lastName>
+					<secondLastName></secondLastName>
+				</author>
+			</authors>
+		</book>
+
+		<book>
+			<title>Discrete Mathematics and its Application</title>
+			<isbn>0-07-338309-0</isbn>
+			<year>2012</year>
+			<editorial>McGraw-Hill</editorial>
+			<authors>
+				<author>
+					<name>Kenneth</name>
+					<lastName>Rosen</lastName>
+					<secondLastName></secondLastName>
+				</author>
+			</authors>
+		</book>
+		<book>
+			<title>Discrete Mathematics</title>
+			<isbn>0-13-117686-2</isbn>
+			<year>2005</year>
+			<editorial></editorial>
+			<authors>
+				<author>
+					<name>Richard</name>
+					<lastName>Jhonsonbaugh</lastName>
+					<secondLastName></secondLastName>
+				</author>
+			</authors>
+		</book>
+
+		
+		<booklet>
+			<title>Apuntes para el Curso Cálculo II MA-1002 de la Universidad de Costa Rica</title>
+			<year>2017</year>
+			<authors>
+				<author>
+					<name>Danalie</name>
+					<lastName>Azofeifa</lastName>
+					<secondLastName>Chaves</secondLastName>
+				</author>
+			</authors>
+		</booklet>
+
+	</references>

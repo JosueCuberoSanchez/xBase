@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+
+	<html lang="en">
+	<head>
+		<title>xBase</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Plataforma de ejercicios xBase" />
+		<meta name="keywords" content="xBase, Ejercicios, UCR, Bases" />
+		<link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleLogin.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+	</head>
+	<body class="homepage">
+	<a href="${pageContext.request.contextPath}/login.html">
+		<img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+	</a>
+		<nav class="nav">
+			<ul>
+				<li><a href="${pageContext.request.contextPath}/aboutLoginRegister.html">Acerca de</a></li>
+			</ul>
+		</nav>
+
+   		<img src="${pageContext.request.contextPath}/assets/Images/NoMore.png" class="nomore" alt=""/>
+   		<section class="detail"><!-- --></section>
+   		<section class="foot">   			
+			<p class="error">*Verifique los campos</p>
+   			<form  class="log" action="${pageContext.request.contextPath}/ws/login" method="post">
+                <input class="inText" name="username" placeholder="Correo"/><br/>
+                <input type="password" class="inText" name="password" placeholder="Contraseña"/><br/>
+				<a class="forgot" href="${pageContext.request.contextPath}/forgotPassword.html">Olvidé mi contraseña</a>
+			  	<button class="mSubmit">Entrar</button>
+			</form>  			
+   		</section>
+    </body>
+</html>
+</jsp:root>

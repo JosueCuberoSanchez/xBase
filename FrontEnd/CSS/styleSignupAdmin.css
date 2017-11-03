@@ -1,0 +1,203 @@
+
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+html {   
+	background:#f2f2f2;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:#ffffff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:#ffffff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:#ffffff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:#ffffff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:#ffffff;
+}
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+}
+body {	
+	width: 100%;
+	font-family: 'Open Sans';
+	font-size:30;
+}
+img.logo {  
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  z-index:2;
+}
+img.newadmin{
+   position: absolute;
+   top: 40%;
+   right: 10%;
+}
+img.tpedit{
+   position: absolute;
+   top: 55px;
+   left: -25px;
+}
+.log{	
+	display: block;
+	position: absolute;
+  	bottom: 30px;
+	color:#ffffff;
+	left:45px;
+}
+input.inText {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  color:#ffffff;
+  width : 300px;
+  border: hidden;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;  
+  background-color: transparent;
+  -webkit-appearance: none;  
+}
+input.inNum {
+  display:inline-block;
+  color:#ffffff;
+  width : 70px;
+  height: 20px;
+  border: hidden;
+  border-left: 1px solid #ffffff;  
+  border-radius: 0;  
+  background-color: transparent;
+  -webkit-appearance: none;
+  float: left;
+}
+input.inName {
+  display:inline-block;
+  color:#ffffff;
+  width : 99px;
+  height: 20px;
+  border: hidden;
+  border-bottom:1px solid #ffffff;
+  border-radius: 0;  
+  background-color: transparent;
+  -webkit-appearance: none;
+  float: left;
+}
+.date{
+	display:inline-block;
+	width: 300px;
+}
+.name{
+	display:inline-block;
+	width: 300px;
+	margin-bottom: 19px;
+}
+button.mSubmit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width : 300px;  
+  height: 80px;
+  background: #0086cb;
+  border: hidden;
+  border-radius: 0;  
+  -webkit-appearance: none;
+  text-align: center;
+  color: #FFFFFF;
+}
+button.mSubmit:hover{
+  background: #ffffff;
+  color:#0086cb;
+}
+button, input, select, textarea :active {
+  outline: none;
+}
+
+button, input, select, textarea {
+  font-family : Gotham;
+  font-size   : 15px;  
+}
+.detail{
+	width: 450px;
+	background: #666666;
+	position:absolute;
+	left: 30px;
+	height: 100%;
+  	bottom:10px;
+	z-index: -1;
+	opacity:1;
+}
+.foot{
+	width: 300px;
+	height: 100%;
+	display: block;
+	background-color: transparent;
+	position:absolute;
+  	bottom:0;
+	left: 55px;
+	
+}
+.nav{
+	overflow: hidden;
+    background-color: #ffffff;
+    position: fixed; 
+    top: 0;
+	left: 0;
+    width: 100%;	
+	opacity: 0.9;
+	font-size: 1em;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+	margin-right: 3em;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+	height: 2em;
+	margin-top: 1em;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;	
+}
+li div {
+	height: 2em;
+	margin-top: 1em;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #000000;
+	color: #ffffff;
+}
+p.error{
+	position: absolute;
+	left:45px;
+	bottom: 0px;
+	color: #ffffff;
+	font-size: 0.8em;
+}

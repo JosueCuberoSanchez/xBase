@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <script type="text/javascript" async=""
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+        </script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Plataforma de ejercicios xBase"/>
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases"/>
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleAnswer.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/slick/slick-theme.css"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/student/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/logout.html">Logout</a></li>
+            <li>
+                <div>|</div>
+            </li>
+            <li><a href="${pageContext.request.contextPath}/student/student.html">Account</a></li>
+            <li><a href="${pageContext.request.contextPath}/student/dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+    <div class="parallax" id="ht">       
+        <div id="group2" class="parallax__group group2">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="tit">The
+                    <div style="font-size: 0.4em; display: inline-block;">procedure</div>
+					<a href="#ht"><img id="id1" onClick="smoothScroll(document.getElementById('group3'))"
+                                   src="${pageContext.request.contextPath}/assets/Images/DOWN.png" alt=""/></a>
+                </div>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <img src="${pageContext.request.contextPath}/assets/Images/Background.jpg" alt="" class="ip"/>
+            </div>
+        </div>
+        <c:choose>
+            <c:when test="${isPractical}">
+                <div id="group3" class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                        <div class="proc">
+                            ${procedure}
+                        </div>
+                    </div>
+                </div>
+            </c:when>
+        </c:choose>
+        <div id="group4" class="parallax__group group2">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="tit">The
+                    <div style="font-size: 0.4em; display: inline-block;">answer</div>
+                </div>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <img src="${pageContext.request.contextPath}/assets/Images/Background.jpg" alt="" class="ip"/>
+            </div>
+        </div>
+        <div id="group5" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="sol">
+                    <c:choose>
+                        <c:when test="${type eq 'TEXT'}">
+                            ${answer.content}
+                        </c:when>
+                        <c:when test="${type eq 'IMAGE'}">
+                            ${answer.imagePath}
+                        </c:when>
+                        <c:when test="${type eq 'NUMERIC'}">
+                            ${answer.numericalAnswer}
+                        </c:when>
+                        <c:when test="${type eq 'CODE'}">
+                            ${answer.programmingLanguage} <br><!-- --></br>
+                            ${answer.sourceCode}
+                        </c:when>
+                    </c:choose>
+                </div>
+                <div class="end">
+                    <a href="#" class="Option">Accept</a>
+                    <div id="bardetail"><!-- --></div>
+                    <div class="altOptions">
+                        <a href="#" class="opt1"><!-- --></a>
+                        <button class="button" id="myRating">Rate</button>
+                        <div id="myPopup" class="popup">
+                            <div id="form" class="popup-form">
+                                <div>
+                                    <h3>Rate this Exercise</h3>
+                                    <div class="rating-input">
+                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                    </div>
+                                    <input type="submit"/>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                var popup = document.getElementById("myPopup");
+                                var buttonReport = document.getElementById("myRating");
+
+                                // When the user clicks the button, open the form
+                                buttonReport.onclick = function() {
+                                    popup.style.display = "block";
+                                }
+                                window.onclick = function(event) {
+                                    if (event.target == buttonReport) {
+                                        popup.style.display = "none";
+                                    }
+                                }
+                            </script>
+                        </div>
+                        <a href="#" class="opt2"><!-- --></a>
+                        <button class="button" id="myReport">Report</button>
+                        <div id="myReportPop" class="popup">
+                            <div class="popup-form">
+                                <div>
+                                    <h3>Report this answer</h3>
+                                    Comment:<input type="submit"/>
+                                    <input type="submit"/>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                var report = document.getElementById("myReportPop");
+                                var buttonReport = document.getElementById("myReport");
+
+                                // When the user clicks the button, open the form
+                                buttonReport.onclick = function() {
+                                    report.style.display = "block";
+                                }
+                                window.onclick = function(event) {
+                                    if (event.target == report) {
+                                        report.style.display = "none";
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.smoothScroll = function(target) {
+            var scrollContainer = target;
+            do { //find scroll container
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
+
+            var targetY = 0;
+            do { //find the top of target relatively to the container
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
+
+            scroll = function(c, a, b, i) {
+                i++; if (i > 30) return;
+                c.scrollTop = a + (b - a) / 30 * i;
+                setTimeout(function(){ scroll(c, a, b, i); }, 20);
+            }
+            // start scrolling
+            scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        }
+
+    </script>
+    </body>
+    </html>
+</jsp:root>

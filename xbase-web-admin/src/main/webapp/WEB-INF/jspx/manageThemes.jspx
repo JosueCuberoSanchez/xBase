@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+    <jsp:output omit-xml-declaration="true"/>
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat"/>
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Plataforma de ejercicios xBase"/>
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases"/>
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css"
+              href="${pageContext.request.contextPath}/assets/CSS/styleManageThemes.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav"><!-- -->
+        <ul><!-- -->
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li>
+                <div>|</div>
+            </li>
+            <li><a href="${pageContext.request.contextPath}/admin/admin.html">Cuenta</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/dashboard.html">Página Principal</a></li>
+        </ul>
+    </nav>
+    <form accept-charset="UTF-8" action="${pageContext.request.contextPath}/admin/manageThemes.html">
+        <input type="text" name="search" placeholder=" Buscar por tema padre" />
+    </form>
+    <c:choose>
+        <c:when test="${showParent}">
+            <section class="fatherContainer"><!-- -->
+                <div class="fTheme">
+                    <output name="result">${parentTopic}</output>
+                    <a href="#popup1"><!-- -->
+                        <div class="editIMG">
+                        </div>
+                    </a>
+                    <a href="#edit-topic"><!-- -->
+                        <img src="${pageContext.request.contextPath}/assets/Images/Cancel.png" alt="" class="cancelIMG"/>
+                    </a>
+                </div>
+            </section>
+        </c:when>
+    </c:choose>
+    <div id="popup1" class="overlay"><!-- -->
+        <div class="popup"><!-- -->
+            <input type="text" name="search" placeholder="Nombre del tema"/>
+            <a class="okpop" href="#">Ok</a>
+        </div>
+    </div>
+    <section class="sonContainer"><!-- -->
+        <div class="results"><!-- -->
+            <c:forEach items="${subtopics}" var="subtopic">
+            <div class="theme">
+                <a href="${pageContext.request.contextPath}/admin/exercisesByTheme.html?theme=${subtopic.name}">${subtopic.name}</a>
+            </div>
+            <div class="info">
+                <div class="topcont">
+                    <a href="#popup1" class="edit">
+                        Editar
+                    </a>
+                </div>
+            </div>
+            <a href="${pageContext.request.contextPath}/admin/manageThemes.html"><!-- -->
+                <img src="${pageContext.request.contextPath}/assets/Images/Cancel.png" alt="" class="delete"/>
+            </a>
+            </c:forEach>
+        </div>
+        <a class="nodecor" href="#add-topic"><!-- -->
+            <div class="addTheme">
+                Agregar tema
+            </div>
+        </a>
+        <form role="form" action="${pageContext.request.contextPath}/admin/manageThemes.html" method="post">
+            <div id="add-topic" class="overlay">
+                <div class="popupAdd">
+                    <img src="${pageContext.request.contextPath}/assets/Images/Cancel.png" alt="" class="delete"/>
+                    <h2>Ingrese el nuevo tema:</h2>
+                    <input name="newTopic"><!-- --></input>
+                    <input type="submit" class="submit-topic"/>
+                </div>
+            </div>
+        </form>
+        <c:choose>
+            <c:when test="${added}">
+                <div class="overlay">
+                    <img src="${pageContext.request.contextPath}/assets/Images/Cancel.png" alt="" class="delete"/>
+                    <span class="popupAdd">Tema agregado exitosamente</span>
+                </div>
+            </c:when>
+        </c:choose>
+        <form role="form" action="${pageContext.request.contextPath}/admin/manageThemes.html" method="post">
+            <div id="edit-topic" class="overlay">
+                <div class="popupAdd">
+                    <img src="${pageContext.request.contextPath}/assets/Images/Cancel.png" alt="" class="delete"/>
+                    <h2>Edite el tema:</h2>
+                    <label>Nombre: </label>
+                    <input name="editTopic"><!-- --></input>
+                    <input type="submit" class="submit-topic"/>
+                </div>
+            </div>
+        </form>
+        <c:choose>
+            <c:when test="${edited}">
+                <div class="overlay">
+                    <img src="${pageContext.request.contextPath}/assets/Images/Cancel.png" alt="" class="delete"/>
+                    <span class="popupAdd">Tema editado exitosamente</span>
+                </div>
+            </c:when>
+        </c:choose>
+    </section>
+    <script>
+
+    </script>
+    </body>
+    </html>
+</jsp:root>

@@ -1,0 +1,1722 @@
+<exercises>
+
+    <exercise>
+        <problem>Haga un programa en C para probar la fórmula de combinatoria $${n+m-1 \choose m} $$,  utilice m = 5 y n = 100 fijos. Imprima el valor final.</problem>
+        <difficulty>MEDIUM</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <ownElaboration>
+                <elabYear>2015</elabYear>
+                <authors>
+                    <author>
+                        <name>Ileana</name>
+                        <lastName>Castillo</lastName>
+                        <secondLastName>Arias</secondLastName>
+                    </author>
+                </authors>
+            </ownElaboration>
+        </references>
+        <topics>
+            <topic>
+                <name>Permutaciones y combinaciones</name>
+                <father>Conteo</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer>
+                    #include&#60;stdio.h&#62;
+                    main() {
+                    int k, n, i1, i2, i3, i4, i5;
+                    n = 100;
+                    k = 0;
+                    for (i1 = 1; i1 &#60;= n; i1++) {
+                    for (i2 = 1; i2 &#60;= i1; i2++) {
+                    for (i3 = 1; i3 &#60;= i2; i3++) {
+                    for (i4 = 1; i4 &#60;= i3; i4++) {
+                    for (i5 = 1; i5 &#60;= i4; i5++) {
+                    k = k+1;
+                    }
+                    }
+                    }
+                    }
+                    }
+                    printf("k = %d\n",  k);
+                    }
+                </codeAnswer>
+                <progLanguage>c</progLanguage>
+                <answerType>CODE</answerType>
+                <isPractical>false</isPractical>
+                <procedure></procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Demuestre por inducción que $$1 \cdot 1! + 2 \cdot 2! + \cdot \cdot \cdot + n \cdot n! = (n + 1) - 1$$</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <booklet>
+                <title>Apuntes para el Curso Cálculo II MA-1002 de la Universidad de Costa Rica</title>
+                <year>2017</year>
+                <authors>
+                    <author>
+                        <name>Danalie</name>
+                        <lastName>Azofeifa</lastName>
+                        <secondLastName>Chaves</secondLastName>
+                    </author>
+                </authors>
+            </booklet>
+        </references>
+        <topics>
+            <topic>
+                <name>Teorema de inducción</name>
+                <father>Recursividad</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>La propiedad es correcta</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Paso 1, n = 1
+                        $$1 \cdot 1! = (1 + 1)! - 1\\$$
+
+                        Paso 2, vamos a asumir que
+                        $$1 \cdot 1! + 2 \cdot 2! + \cdot \cdot \cdot + n \cdot n! = (n + 1)! - 1\\$$
+
+                        y vamos a probar que
+                        $$1 \cdot 1! + 2 \cdot 2! + \cdot \cdot \cdot + n \cdot n! + (n + 1) \cdot (n + 1)! = (n + 2)! - 1\\$$
+
+                        En efecto,
+                        $$ \begin{array}{rcll}
+                        1 \cdot 1! + 2 \cdot 2! + \cdot \cdot \cdot + n \cdot n! + (n + 1) \cdot (n + 1)! &#38; = &#38; \underbrace{1 \cdot 1! + 2 \cdot 2! + \cdot \cdot \cdot + n \cdot n!} + (n + 1)(n + 1)!\\
+                        &#38;  &#38;  \hspace{12mm}(n + 1)! - 1\\
+                        &#38; = &#38; (n + 1)! - 1 + (n + 1)(n + 1)!\\
+                        &#38; = &#38; ((n + 1)! + (n + 1)(n + 1)!) - 1\\
+                        &#38; = &#38; (n + 1)!(1 + (n + 1)) - 1\\
+                        &#38; = &#38; (n + 1)! (n + 2) - 1\\
+                        &#38; = &#38; (n + 2)! - 1\\
+                        \end{array} $$</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+
+    <exercise>
+        <problem>Construct the graph for the given map: https://www.dropbox.com/s/lu6rxbahfe7022o/E3.PNG?dl=0</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematical Structures</title>
+                <isbn>0-13-320912-1</isbn>
+                <year>1996</year>
+                <editorial>Prentice Hall</editorial>
+                <authors>
+                    <author>
+                        <name>Bernard</name>
+                        <lastName>Kolman</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                    <author>
+                        <name>Robert</name>
+                        <lastName>Busby</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                    <author>
+                        <name>Sharon </name>
+                        <lastName>Ross</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Tipos especiales de grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer>https://www.dropbox.com/s/fm2g9xirkwanqif/E3R2.PNG?dl=0</imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>IMAGE</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text></text>
+                    <image>https://www.dropbox.com/s/b2khcrtfquqz0ty/E3R.PNG?dl=0</image>
+                    <procedureType>IMAGE</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>We shoot 50 shots at a square target, the side of which is 70 cm long. We are quite a good shot, because all of our shots hit the target. Prove that there are two bulletholes that are closer than 15 cm.</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics Elementary and Beyond</title>
+                <isbn>0-387-95584-4</isbn>
+                <year>2003</year>
+                <editorial>Springer</editorial>
+                <authors>
+                    <author>
+                        <name>László</name>
+                        <lastName>Lovász</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                    <author>
+                        <name>József</name>
+                        <lastName>Pelikán</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Principio del palomar</name>
+                <father>Conteo</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>Imagine that our target is an old chessboard. One row and one column of it has fallen off, so it has 49 squares. The board received 50 shots, so there must be a square that received at least two shots (putting bulletholes in pigeonholes).We claim that these two shots are closer to each other than 15 cm.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>false</isPractical>
+                <procedure></procedure>
+            </answer>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>false</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>The side of the square is obviously 10 cm, the diagonals of it are equal, and (from the Pythagorean Theorem) their length is $$\sqrt{200} \approx 14.1$$ cm. We show that the two shots cannot be at a larger distance than the diagonal.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>false</isPractical>
+                <procedure></procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Prove Theorem Euler: A finite connected graph G is Eulerian if and only if each vertex has even degree.</problem>
+        <difficulty>COMPLEX</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Theory and Problems of Discrete Mathematics</title>
+                <isbn>0-07-151101-6</isbn>
+                <year>2007</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Seymor</name>
+                        <lastName>Lipschutz</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                    <author>
+                        <name>Marc</name>
+                        <lastName>Lipson</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Terminología sobre Grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>Suppose $$G$$ is Eulerian and $$T$$ is a closed Eulerian trail. For any vertex $$v$$ of $$G$$, the trail $$T$$ enters and leaves $$v$$ the same number of times without repeating any edge. Hence $$v$$ has even degree. Suppose conversely that each vertex of $$G$$ has even degree. We construct an Eulerian trail.We begin a trail $$T_{1}$$ at any edge $$e$$. We extend $$T_{1}$$ by adding one edge after the other. If $$T_{1}$$ is not closed at any step, say, $$T_{1}$$ begins at u but ends at $$v \neq u$$, then only an odd number of the edges incident on $$v$$ appear in $$T_{1}$$; hence we can extend $$T_{1}$$ by another edge incident on $$v$$. Thus we can continue to extend $$T_{1}$$ until $$T_{1}$$ returns to its initial vertex $$u$$, i.e., until $$T_{1}$$ is closed. If $$T_{1}$$ includes all the edges of $$G$$, then $$T_{1}$$ is our Eulerian trail. Suppose $$T_{1}$$ does not include all edges of $$G$$. Consider the graph $$H$$ obtained by deleting all edges of $$T_{1}$$ from $$G$$. $$H$$ may not be connected, but each vertex of $$H$$ has even degree since $$T_{1}$$ contains an even number of the edges incident on any vertex. Since $$G$$ is connected, there is an edge $$e$$ of $$H$$ which has an endpoint $$u$$ in $$T_{1}$$. We construct a trail $$T_{2}$$in $$H$$ beginning at $$u$$ and using $$e$$. Since all vertices in $$H$$ have even degree, we can continue to extend $$T_{2}$$ in $$H$$ until $$T_{2}$$ returns to $$u$$. We can clearly put $$T_{1}$$ and $$T_{2}$$ together to form a larger closed trail in $$G$$. We continue this process until all the edges of $$G$$ are used. We finally obtain an Eulerian trail, and so $$G$$ is Eulerian.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>false</isPractical>
+                <procedure></procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Find a minimal spanning tree for the following graph: https://www.dropbox.com/s/ig7jr4ohx9onbrv/E6.PNG?dl=0</problem>
+        <difficulty>ADVANCED</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Theory and Problems of Discrete Mathematics</title>
+                <isbn>0-07-151101-6</isbn>
+                <year>2007</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Seymor</name>
+                        <lastName>Lipschutz</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                    <author>
+                        <name>Marc</name>
+                        <lastName>Lipson</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Algoritmos para grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer>https://www.dropbox.com/s/fwomzfu2www7oni/E6R.PNG?dl=0</imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>IMAGE</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text></text>
+                    <image>https://www.dropbox.com/s/fwomzfu2www7oni/E6R.PNG?dl=0</image>
+                    <procedureType>IMAGE</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Find the minimum number n of colors required to paint the map: https://www.dropbox.com/s/kqrlzoh8d444xtg/E7.PNG?dl=0 </problem>
+        <difficulty>MEDIUM</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Theory and Problems of Discrete Mathematics</title>
+                <isbn>0-07-151101-6</isbn>
+                <year>2007</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Seymor</name>
+                        <lastName>Lipschutz</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                    <author>
+                        <name>Marc</name>
+                        <lastName>Lipson</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Algoritmos para grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer>4</numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>NUMERIC</answerType>
+                <isPractical>false</isPractical>
+                <procedure></procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Draw the graph corresponding to the adjacency matrix: https://www.dropbox.com/s/o0fkaqfbqj3y2hs/E8.PNG?dl=0</problem>
+        <difficulty>MEDIUM</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Theory and Problems of Discrete Mathematics</title>
+                <isbn>0-07-151101-6</isbn>
+                <year>2007</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Seymor</name>
+                        <lastName>Lipschutz</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                    <author>
+                        <name>Marc</name>
+                        <lastName>Lipson</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Terminología sobre Grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer>https://www.dropbox.com/s/yole21j7n1ffu0y/E8R.PNG?dl=0</imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>IMAGE</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text></text>
+                    <image>https://www.dropbox.com/s/yole21j7n1ffu0y/E8R.PNG?dl=0</image>
+                    <procedureType>IMAGE</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>How many numbers must be selected from the set 1, 3, 5, 7, 9, 11, 13, 15 to guarantee that at least one pair of these numbers add up to 16?</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Principio del palomar</name>
+                <father>Conteo</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer>5</numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>NUMERIC</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Para sumar 16, los números deben ser 1 y 15, 3 y 13, 5 y 11, o 7 y 9. Es decir, existen 4 parejas de números que suman 16. Cada número del conjunto tiene una correspondiente pareja con la cual suma 16. Por tanto, el máximo número de elementos sin pareja que pueden ser seleccionados es 4 (ej. $$\{1, 3, 5, 7\}$$).
+                        Por el principio del palomar, si seleccionamos 5 números, al menos uno de ellos tendrá una pareja con la cual sumará 16.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>The name of a variable in the C programming language is a string that can contain uppercase letters, lowercase letters, digits, or underscores. Further, the first character in the string must be a letter, either uppercase or lowercase, or an underscore. If the name of a variable is determined by its first eight characters, how many different variables can be named in C? (Note that the name of a variable may contain fewer than eight characters.) </problem>
+        <difficulty>ADVANCED</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Regla del producto y regla de la suma</name>
+                <father>Conteo</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$2.12133167\cdot10^{14}$$.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Se parte de que el alfabeto contiene 26 letras. El primer carácter de la variable se puede escoger de $$26 + 26 + 1 = 53$$ maneras, los demás caracteres se pueden escoger de $$26 + 26 + 10 + 1 = 63$$ formas. Si el nombre de la variable contiene $$n$$ caracteres, para $$1 \leq n \leq 8$$, se pueden formar $$53 \cdot 63^{n-1}$$ nombres de variables. Por tanto, el número de diferentes nombres de variables en C es:\\
+                        $$\sum\limits_{n=1}^8 53\cdot63^{n-1} = 53\sum\limits_{n=1}^8 63^{n-1} = 53(1 + 63 + 63^2 + 63^3 + 63^4 + 63^5 + 63^6 + 63^7) \approx 2.12133167\cdot10^{14}$$.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Seven women and nine men are on the faculty in the mathematics department at a school. How many ways are there to select a committee of five members of the department if at least one woman must be on the committee?</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Permutaciones y combinaciones</name>
+                <father>Conteo</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer>4242</numberAnswer>
+                <numberUnits>comités</numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>NUMERIC</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Sin restricciones sobre el número de mujeres, habrían $$7 + 9 = 16$$ personas para formar un comité de 5, lo cual indica que habrían $${16 \choose 5}  =  4368$$ posibles comités.
+                        Si no hubieran mujeres en el comité, habrían $${9 \choose 5}  = 126$$ formas de escoger el comité. El resto de comités contienen mujeres.
+                        Por tanto, hay $$4368 – 126 = 4242$$ comités con al menos una mujer.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Find a formula for the number of ways to seat r of n people around a circular table, where seatings are considered the same if every person has the same two neighbors without regard to which side these neighbors are sitting on. </problem>
+        <difficulty>COMPLEX</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Permutaciones y combinaciones</name>
+                <father>Conteo</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$\frac{P(n, r)}{2r}$$.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>El problema se puede partir en dos etapas. Primero, seleccionar las $$r$$ personas. Segundo, contar de cuántas maneras se pueden sentar esas $$r$$ personas en la mesa.
+                        La primera parte es muy fácil. hay $$n \choose r$$ maneras de seleccionar las personas.
+                        Para la segunda parte, si elimináramos la condición de que no importe si los vecinos están a uno u otro lado de cada persona, entonces habrían $$\frac{r!}{r} = (r - 1)!$$ maneras de sentar las $$r$$ personas en la mesa circular. Al considerar de nuevo la condición, vemos que para cada forma de sentarse, hay 2 maneras en que los vecinos pueden sentarse a un lado u otro de una persona dada, lo que es equivalente a considerar la imagen espejo de cada ronda. Entonces, debemos dividir entre 2 para eliminar estas repeticiones espejo.
+                        Por tanto, hay $${n \choose r}\frac{r!}{2r} = \frac{n!}{(n - r)!\,2r}$$ maneras de sentarse. Este número se puede interpretar también como las r-permutaciones divididas por $$2r$$: $$\frac{P(n, r)}{2r}$$.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>What is the greatest common divisor and the least common multiple of the pair of integers $$a=3^{7}\cdot 5^{3} \cdot 7^{3}$$ and $$b=2^{11}\cdot 3^{5} \cdot 5^{9}$$?</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics</title>
+                <isbn>0-13-117686-2</isbn>
+                <year>2005</year>
+                <editorial></editorial>
+                <authors>
+                    <author>
+                        <name>Richard</name>
+                        <lastName>Jhonsonbaugh</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Números primos y Máximo Común Divisor</name>
+                <father>Teoría de números</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$gcd (a, b) = 30375$$
+                    $$lcm (a, b) = 3.000564 x 10^{15}$$
+                </textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>$$lcm(a, b) = 2^{11} \cdot 3^{7} \cdot 5^{9} \cdot 7^{3}$$
+                        $$gcd(a, b) = 3^{5} \cdot 5^{3}$$</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>¿Cuál es el cociente y el resto (o residuo) cuando -123 es dividido por 19?</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Divisibilidad y aritmética modular</name>
+                <father>Teoría de números</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer> $$q=-7$$ y $$r=10$$</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Aplicando el Algoritmo de la División con $$a=-123$$ y $$d=19$$ se obtiene que $$q=-7$$ y $$r=10$$. Con $$0 \leq r &#60; d$$, $$-123=19*(-7) + 10$$.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>How many bit strings are there of length six or less, not counting the empty string?</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Regla del producto y regla de la suma</name>
+                <father>Conteo</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer>126</numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Sabemos que hay $$2^n$$ hileras binarias de longitud exacta $$n$$. Para resolver el problema, podemos aplicar la regla de la suma y contar las hileras de longitud $$n$$, desde $$n=1$$ hasta $$n=6$$, lo cual nos produce $$2^1 + 2^2 + 2^3 + 2^4 + 2^5 + 2^6 = 2+4+8+16+32+64 = 126$$. Al no incluir el caso $$n=0$$, estamos excluyendo la hilera vacía.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>How many strings are there of four lowercase letters that have the letter x in them?</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Regla del producto y regla de la suma</name>
+                <father>Conteo</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer>66351</numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Supondremos que el alfabeto contiene 26 letras. La letra x debe aparecer al menos una vez. Podríamos intentar dividir el problema en hileras donde hay una sola x, la cual puede estar en 1 de 4 posiciones, hileras con 2 letras x, etc. Sin embargo, es más fácil calcular el total de hileras sin restricciones de letras, y restarle el número de hileras que no tienen x. Lo que queda son las hileras que tienen al menos 1 letra x. \\ Total de hileras sin restricciones $$= 26^4 = 456976$$.\\ Hileras sin letra x $$= 25^4 = 390625$$.\\ Hileras con x $$= 26^4 - 25^4 = 456976 - 390625 = 66351$$. Bajo el otro enfoque, tómese en cuenta que la posición para $$n$$ letras x puede escogerse de combinaciones $${4 \choose n}$$ maneras, y las restantes $$4-n$$ posiciones pueden llenarse de $$25^{4-n}$$ formas. Sumando sobre $$n$$ de 1 a 4, tenemos:\\ $${4 \choose 1}25^3 + {4 \choose 2}25^2 + {4 \choose 3}25^1 + {4 \choose 4}25^0 = 4*25^3 + 6*25^2 + 4*25 + 1 = 66351$$.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>How many zeros are there at the end of 100!?</problem>
+        <difficulty>ADVANCED</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Números primos y Máximo Común Divisor</name>
+                <father>Teoría de números</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer>24</numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer></textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>NUMERIC</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Cada 0 proviene de multiplicar el primo 2 por el primo 5. Por tanto, se debe averiguar cuáles son las potencias de 2 y de 5 contenidas en la factorización prima de 100!
+                        Los números 2 son más abundantes, puesto que cada factor par de 100! contribuye con al menos uno. Los números 5 se encuentran en factores múltiplos de 5: 5, 10, 15, 20, ..., 90, 95, 100.
+                        Hay 20 de estos múltiplos, y los números 25, 50, 75 y 100 contribuyen con 2 cincos cada uno. Entonces, hay un total de 24 cincos, que producirán 24 ceros al final de 100!.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>¿Qué es una gráfica?</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics</title>
+                <isbn>0-13-117686-2</isbn>
+                <year>2005</year>
+                <editorial></editorial>
+                <authors>
+                    <author>
+                        <name>Richard</name>
+                        <lastName>Jhonsonbaugh</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Terminología sobre Grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>En un conjunto V de vértices (o nodos) y un conjunto E de aristas (o arcos) tal que cada arista e ∈ E se asocia con un par no ordenado de vértices.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>false</isPractical>
+                <procedure></procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Demuestre que la gráfica no es bipartita. https://www.dropbox.com/s/kpltkzuh4yzln0a/E8.1.13.PNG?dl=0</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics</title>
+                <isbn>0-13-117686-2</isbn>
+                <year>2005</year>
+                <editorial></editorial>
+                <authors>
+                    <author>
+                        <name>Richard</name>
+                        <lastName>Jhonsonbaugh</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Terminología sobre Grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>La gráfica de la figura 8.1.14 no es bipartita.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Se puede hacer una partición del conjunto de vértices en dos subconjuntos $$V_{1}$$ y $$V_{2}$$ tal que cada arista incida en un vértice en $$V_{1}$$ y un vértice en $$V_{2}$$ . Ahora considere los vértices $$v_{4}$$ , $$v_{5}$$ y $$v_{6}$$ . Como $$v_{4}$$ y $$v_{5}$$ son adyacentes, uno está en $$V_{1}$$  y el otro en $$V_{2}$$ . Se puede suponer que $$v_{4}$$ está en $$V_{1}$$  y $$v_{5}$$ en $$V_{2}$$ . Como $$v_{5}$$ y $$v_{6}$$ son adyacentes y $$v_{5}$$ está en $$V_{2}$$ , $$v_{6}$$ está en $$V_{1}$$  . Como $$v_{4}$$ y $$v_{6}$$ son adyacentes y $$v_{4}$$ está en $$V_{1}$$ , $$v_{6}$$ está en $$V_{2}$$ . Pero resulta que $$v_{6}$$ está en $$V_{1}$$  y en $$V_{2}$$ , lo cual es una contradicción ya que $$V_{1}$$ y $$V_{2}$$ son ajenos. </text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>What is the coefficient of  $$x^{8}$$ $$y^{9}$$ in the expansion of  $$(3x + 2y)^{17}$$?</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Progresiones aritméticas y geométricas</name>
+                <father>Recursividad</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$\begin{equation*} C \binom{17}{8} 3^{8}2^{9}\end{equation*}$$</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Sustituyendo w = 3x y z = 2y. El coeficiente de $$w^{8}$$ $$z^{9}$$ en $$(w + z)^{17}$$ es $$\begin{equation*} C \binom{17}{8}\end{equation*}$$
+
+                        De esta manera $$\begin{equation*} C \binom{17}{8} w^{8} z^{9} = C \binom{17}{8} 3^{8}x^{8}2^{9}y^{9}\end{equation*}$$ El coeficiente de  $$x^{8}$$ $$y^{9}$$ en la expansión de $$(3x + 2y)^{17}$$ es  $$\begin{equation*} C \binom{17}{8} 3^{8}2^{9}\end{equation*}$$</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Determine whether the graphs G and H shown in Figure 7 are isomorphic. \\     https://www.dropbox.com/s/dg67xglgh84bbm4/Example14.PNG?dl=0</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Terminología sobre Grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>Both G and H have five vertices and six edges, both have two vertices of degree three
+                    and three vertices of degree two, and both have a simple circuit of length three, a simple circuit
+                    of length four, and a simple circuit of length five. Because all these isomorphic invariants agree,
+                    G and H may be isomorphic.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>false</isPractical>
+                <procedure></procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Solve the recurrence relation $$a_n = 6a_{n-1}- 12a_{n-2} + 8a_{n-3}$$ with $$a_0 =-5, a_1 = 4$$, and $$a_2 = 88$$.</problem>
+        <difficulty>EASY</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Relaciones de recurrencia lineales</name>
+                <father>Recursividad</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$a_n = -5\cdot 2^n + (1/2) n \cdot 2^n +  (13/2) n^2\cdot 2^n$$.</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Ecuación característica: $$x^3 -6x^2 + 12x -8 = 0$$
+
+                        Intentamos factorizar por división sintética.
+
+                        $$ 1~~ -6~~ 12~~ -8 ~~|~~ 2$$
+
+                        \line(1,0){100}
+
+                        $$ 1~~ -4~~~  4~~~~~~ 0$$
+
+                        Entonces, la ecuación es $$(x-2)(x^2 -4x+4)=(x-2)(x-2)^2=(x-2)^3=0$$
+
+                        y tiene un único cero $$x_1 = 2$$ de multiplicidad 3.
+
+                        La solución general de esta ecuación es $$a_n = \alpha 2^n + \beta n \cdot 2^n +
+                        \gamma n^2\cdot 2^n$$
+
+                        Al utilizar las condiciones iniciales, se forma el sistema de ecuaciones
+
+                        $$a_0 = \alpha = -5$$
+
+                        $$a_1 = 2\alpha + 2\beta + 2\gamma = 4$$
+
+                        $$a_2 = 4\alpha + 8\beta + 16\gamma = 88 $$\\
+
+                        $$a_1 = -10 + 2\beta + 2\gamma = 4$$
+
+                        $$a_2 = -20 + 8\beta + 16\gamma = 88 $$\\
+
+                        $$\beta + \gamma = 7$$
+
+                        $$2\beta + 4\gamma = 27 $$\\
+
+                        La solución del sistema es
+
+                        $$\alpha = -5$$,
+
+                        $$\beta = 1/2$$,
+
+                        $$\gamma = 13/2$$
+
+                        La solución final es: $$a_n = -5\cdot 2^n + (1/2) n \cdot 2^n +
+                        (13/2) n^2\cdot 2^n$$.\\</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Find $$f(n)$$ when $$n = 4^k$$, where $$f$$ satisfies the recurrence relation $$f(n) = 5f(n/4) + 6n$$, with $$f(1) = 1$$.</problem>
+        <difficulty>MEDIUM</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Relaciones de recurrencia lineales</name>
+                <father>Recursividad</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$f(n) = 25\cdot n^{\log_4(5)} - 24n $$</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Una tabla para ayudar a encontrar el patrón es la siguiente
+
+                        \begin{tabular}{r|l}
+                        $$n$$ &#38; $$f(n)$$\\
+                        \hline
+                        $$1 = 4^0$$ &#38; $$1$$\\
+                        $$4 = 4^1$$ &#38; $$5 + 6 \cdot 4$$ \\
+                        $$16 = 4^2$$ &#38; $$5^2 + 5 \cdot 6 \cdot 4 + 6\cdot 4^2$$\\
+                        $$4^3$$ &#38; $$5^3 + 5^2 \cdot 6 \cdot 4 + 5\cdot 6\cdot 4^2 + 6\cdot 4^3$$\\
+                        $$4^4$$ &#38; $$5^4 + 5^3 \cdot 6 \cdot 4 + 5^2\cdot 6\cdot 4^2 + 5\cdot 6\cdot 4^3
+                        + 6\cdot 4^4$$\\
+                        $$4^k$$ &#38; $$5^k + 6\sum_{i=1}^k 5^{k-i}4^i$$\\
+                        \hline
+                        \end{tabular}
+
+                        La sumatoria se puede calcular así:
+                        $$\sum_{i=1}^k 5^{k-i}4^i = 5^k \sum_{i=1}^k 5^{-i}4^i =
+                        5^k \sum_{i=1}^k (4/5)^i =  5^k \frac{(4/5)^{k+1}-(4/5)}{4/5 - 1} = 5^k (4/5)
+                        \frac{(4/5)^k-1}{-1/5} =$$
+
+                        $$ 4\cdot 5^k (1-(4/5)^k) = 4\cdot (5^k-4^k)$$
+
+                        Entonces, $$f(4^k) = 5^k + 6\cdot 4\cdot (5^k-4^k) = 5^k + 24\cdot
+                        (5^k-4^k) = 25\cdot 5^k -24\cdot 4^k = 5^{k+2} - 6\cdot 4^{k+1}$$
+
+                        Para generalizar, hacemos $$n = 4^k \Rightarrow k = \log_4(n)\Rightarrow 5^k =
+                        5^{\log_4(n)} = n^{\log_4(5)}$$
+
+                        Por tanto, $$f(n) = 25\cdot n^{\log_4(5)} - 24n $$</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Prove by induction that if $$T(n) = 1 + T(\lfloor n/2 \rfloor)$$, $$T(0)= 0$$, and $$2^{r-1} \leq n &#60; 2^r$$, $$r \geq 1$$, then $$T(n) = r$$. (Hint: Prove by induction on $$r$$.) \\</problem>
+        <difficulty>MEDIUM</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+
+                <name>Teorema de inducción</name>
+                <father>Recursividad</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>Se cumple la propiedad</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Para tener una mejor perspectiva de $$T(n)$$, veamos sus primeros valores.
+
+                        \begin{tabular}{r|rr}
+                        $$n$$ &#38; $$T(n)$$ &#38; $$r$$\\
+                        \hline
+                        0  &#38; 0 \\
+                        $$2^0=1$$ &#38; 1 &#38; 1\\
+                        $$2^1=2$$ &#38; 2 &#38; 2\\
+                        3  &#38; 2 &#38; 2\\
+                        $$2^2=4$$ &#38; 3 &#38; 3\\
+                        5  &#38; 3 &#38; 3\\
+                        6  &#38; 3 &#38; 3\\
+                        7  &#38; 3 &#38; 3\\
+                        $$2^3=8$$ &#38; 4 &#38; 4\\
+                        9  &#38; 4 &#38; 4\\
+                        \hline
+                        \end{tabular}
+
+                        Caso base: $$r=1$$. En este caso, $$2^{1-1} \leq n &#60; 2^1$$, es decir
+                        $$1 \leq n &#60; 2 \Rightarrow n=1$$ es el único $$n$$ involucrado, y para él,
+                        $$T(1)=1$$. Entonces, se cumple la proposición $$T(n) = r$$.
+
+                        Paso de inducción: Suponemos que $$r$$ es tal que $$\forall n \in \{2^{r-1},
+                        2^{r-1} +1, \cdots , 2^{r}-1 \}$$ se cumple que $$T(n) = r$$.
+
+                        Probemos que para $$r+1$$ se cumple la proposición: si $$n \in \{2^{r},
+                        2^{r} +1, \cdots , 2^{r+1}-1 \}$$ entonces $$T(n) = r+1$$.
+
+                        Sea $$2^{r} \leq n &#60; 2^{r+1}$$
+
+                        $$\Rightarrow 2^{r-1} \leq n/2 &#60; 2^{r}$$ (dividiendo por 2 la desigualdad
+                        anterior)
+
+                        $$\Rightarrow 2^{r-1} \leq \lfloor n/2 \rfloor &#60; 2^{r}$$
+
+                        $$\Rightarrow T(\lfloor n/2 \rfloor) = r$$ (por I.H. hipótesis de inducción)
+
+                        $$\Rightarrow T(n) = T(\lfloor n/2 \rfloor) + 1 = r+1$$
+
+                        con lo cual se prueba que para $$r+1$$ se cumple la proposición.\\</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Descifre el mensaje YKSIEYDQEMWYISWRIQ usando la llave:
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            EIJFUAXVHWP GSRKOBTQYDMLZNC
+        </problem>
+        <difficulty>ADVANCED</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics</title>
+                <isbn>0-13-117686-2</isbn>
+                <year>2005</year>
+                <editorial></editorial>
+                <authors>
+                    <author>
+                        <name>Richard</name>
+                        <lastName>Jhonsonbaugh</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Criptografía</name>
+                <father>Teoría de números</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>Toma tus vitaminas</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Y = T
+                        K = O
+                        S = M
+                        I = A
+                        E =
+                        Y = T
+                        D = U
+                        Q = S
+                        E =
+                        M = V
+                        W = I
+                        Y = T
+                        I = A
+                        S = M
+                        W = I
+                        R = N
+                        I = A
+                        Q = S</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Use el algoritmo euclidiano para encontrar el máximo común divisor de 220, 1400. Además, encuentre
+            enteros $$s$$ y $$t$$ tales que $$sa + tb = mcd(a, b)$$.
+
+            Algoritmo euclidiano
+            Entrada: a y b (enteros no negativos, ambos diferentes de cero)
+            Salida: máximo común divisor de a y b
+
+            mcd(a, b) {    // sea a el mayor
+            if (a &#60; b)
+            intercambia(a, b)
+            while (b ¬=0) {
+            r = a mod b
+            a = b
+            b = r
+            }
+            return a
+            }</problem>
+        <difficulty>ADVANCED</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics</title>
+                <isbn>0-13-117686-2</isbn>
+                <year>2005</year>
+                <editorial></editorial>
+                <authors>
+                    <author>
+                        <name>Richard</name>
+                        <lastName>Jhonsonbaugh</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Números primos y Máximo Común Divisor</name>
+                <father>Teoría de números</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$mcd = 20$$, $$s = 3$$, $$t = -19$$</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>$$ \begin{array}{rcll}
+                        1400 &#38; = &#38; 220 \cdot 6 + 80\\
+                        220 &#38; = &#38; 80 \cdot 2 + 60\\
+                        80 &#38; = &#38; 60 \cdot 1 + 20\\
+                        60 &#38; = &#38; 20 \cdot 3 + 0\\
+                        \end{array}
+                        \therefore mcd(1400, 220) = 20\\
+                        $$
+
+                        $$ \begin{array}{rcll}
+                        20 &#38; = &#38; 80 - 60 \cdot 1\\
+                        &#38; = &#38; 80 − (220 − 80 \cdot 2) \\
+                        &#38; = &#38; −220 + 3 \cdot 80 \\
+                        &#38; = &#38; −220 + 3 ∗ (1400 − 220 \cdot 6) \\
+                        &#38; = &#38; −19 \cdot 220 + 3 \cdot 1400\\
+                        \end{array}
+                        \therefore s = 3, t = -19\\
+                        $$</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Find all solutions of the recurrence relation $$a_{n} = 2a_{n−1} + 2n^{2}$$</problem>
+        <difficulty>MEDIUM</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Relaciones de recurrencia lineales</name>
+                <father>Recursividad</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$a_{n} = \alpha2^{n} − 2n^{2} − 8n – 12$$</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>La solución de la homogénea es: $$a_{n}^{(h)} = $$\alpha2^{n}.\\$$
+                        La solución particular tiene la forma: $$a_{n}^{(p)} = An^{2} + Bn + C$$. Sustituyendo en la relación de recurrencia se tiene:
+                        $$ \begin{array}{rcll}
+                        An{2} + Bn + C &#38; = &#38;  2A(n − 1)^{2} + 2B(n − 1) + 2C + 2n^{2} \\
+                        0 &#38; = &#38; (A − 2A − 2)n^{2} + (B + 4A − 2B)n + (C − 2A + 2B − 2C)\\
+                        0 &#38; = &#38; −A − 2 \\
+                        0 &#38; = &#38; 4A − B \\
+                        0 &#38; = &#38; 2A − 2B + C \\
+                        &#38; = &#38; −19 \cdot 220 + 3 \cdot 1400\\
+                        \end{array}
+                        \therefore A = -2, B = 8, C = -12\\
+                        $$ </text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Suppose that Alice and Bob have these public keys and corresponding private keys: $$(n_{Alice}, e_{Alice}) = (2867, 7) = (61×47, 7)$$, $$d_{Alice} = 1183$$ and $$(n_{Bob}, e_{Bob}) = (3127, 21) = (59×53, 21)$$, $$d_{Bob} = 1149$$.
+            Alice wants to send to all her friends, including Bob, the message “SELL EVERYTHING” so that he knows that she sent it. What should she send to her friends, assuming she signs the message using the RSA cryptosystem.</problem>
+        <difficulty>COMPLEX</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics and its Application</title>
+                <isbn>0-07-338309-0</isbn>
+                <year>2012</year>
+                <editorial>McGraw-Hill</editorial>
+                <authors>
+                    <author>
+                        <name>Kenneth</name>
+                        <lastName>Rosen</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Criptografía</name>
+                <father>Teoría de números</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>2186 2087 1279 1251 0326 0816 1948</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Sea M = SELL EVERYTHING. Entonces Alice va a enviar el mensaje C = M1183 mod 2867. De esta manera, Bob y los otros amigos de Alice, usando la llave pública de Alice, podrán descifrar el mensaje. El mensaje en su forma numérica, con un alfabeto de 26 letras, es: 1804 1111 0421 0417 2419 0708 1306.
+                        Como $$2525 &#60; n = 2867 &#60; 252525$$, los dígitos se agrupan de cuatro en cuatro. Alice aplicaría su llave secreta al mensaje, así que por ejemplo, calcularía $$1804^{1183}$$ mod 2867. Y así con cada bloque.</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Para n $$geq$$ 1, el enésimo número triangular $$T_{n}$$ se define como $$T_{n} = 1 + 2 + \cdot \cdot \cdot + n = \frac{n(n+1)}{2}$$.
+            Encuentre y resuelva una relación de recurrencia para $$P_{n}, n \geq 1$$, donde $$P{n} = T_{1} + T_{2} + \cdot \cdot \cdot + T_{n}$$, la suma de los primeros números triangulares.</problem>
+        <difficulty>COMPLEX</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references><ownElaboration>
+            <elabYear>2016</elabYear><authors>
+            <author>
+                <name>Ileana</name>
+                <lastName>Castillo</lastName>
+                <secondLastName>Arias</secondLastName>
+            </author>
+        </authors></ownElaboration></references>
+        <topics>
+            <topic>
+                <name>Relaciones de recurrencia lineales</name>
+                <father>Recursividad</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>$$T_{n} = \frac{n(n + 1)(n + 2)}{6}$$</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text>Una relación de recurrencia es $$P_{n} = P_{n – 1} + T_{n}$$. En este caso, para resolverla, conviene usar el procedimiento iterativo. Es decir, escribir $$P_{n – 1} = P_{n – 2} + T_{n − 1}$$ y así sucesivamente, que al final queda así:
+
+                        $$ \begin{array}{rcll}
+                        P_{n}&#38; = &#38;  \sum_{j = 1}^{n}T_{j}\\
+                        &#38; = &#38;  \sum_{j = 1}^{n}\frac{j(j + 1)}{2}\\
+                        &#38; = &#38; \sum_{j = 1}^{n}\frac{j^{2} + j}{2}\\
+                        &#38; = &#38; \frac{1}{2}\sum_{j = 1}^{n}j^{2} + \sum_{j = 1}^{n}j\\
+                        &#38; = &#38; \frac{1}{2}(\frac{n(n + 1)(2n + 1)}{6} + \frac{n(n + 1)}{2}\\
+                        &#38; = &#38; \frac{n(n + 1)(n + 2)}{6}\\
+                        \end{array}
+                        $$</text>
+                    <image></image>
+                    <procedureType>TEXT</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+    <exercise>
+        <problem>Use el algoritmo de Dijkstra para determinar la longitud de la ruta más corta de $$a$$ a $$z$$.
+            https://www.dropbox.com/s/wt7wt64v2lahgra/E30.PNG?dl=0
+
+            Este algoritmo encuentra la longitud de una ruta más corta del vértice a al vértice z en una gráfica ponderada conexa. El peso de la arista $$(i, j)$$ es $$w(i, j)$$ > 0, y la etiqueta del vértice $$x$$ es $$L(x)$$. Al terminar, $$L(z)$$ es la longitud de la ruta más corta de $$a$$ a $$z$$.
+
+            Entrada: Una gráfica conexa ponderada en la que todos los pesos son positivos;
+            vértices $$a$$ a $$z$$.
+            Salida: L(z), la longitud de la ruta más corta de a a z
+
+            dijkstra(w, a, z, L) {
+            L(a) = 0
+            \\para todos los vértices x \neq a
+            L(x) = \infty
+            T = conjunto de todos los vértices
+            \\T es el conjunto de todos los vértices cuyas distancias más cortas desde a no se han encontrado
+            while(z ∈ T) {
+            seleccionar $$v \in T$$ con L(v) mínimo
+            T = T - {v}
+            para cada $$x \in T$$ adyacente a v
+            L(x) = mín{L(x),L(v) + w(v, x)
+            }
+            }</problem>
+        <difficulty>COMPLEX</difficulty>
+        <isPublished>true</isPublished>
+        <isVisible>true</isVisible>
+        <isDeleted>false</isDeleted>
+        <references>
+            <book>
+                <title>Discrete Mathematics</title>
+                <isbn>0-13-117686-2</isbn>
+                <year>2005</year>
+                <editorial></editorial>
+                <authors>
+                    <author>
+                        <name>Richard</name>
+                        <lastName>Jhonsonbaugh</lastName>
+                        <secondLastName></secondLastName>
+                    </author>
+                </authors>
+            </book>
+        </references>
+        <topics>
+            <topic>
+                <name>Algoritmos para grafos</name>
+                <father>Grafos</father>
+            </topic>
+        </topics>
+        <answers>
+            <answer>
+                <isCorrect>true</isCorrect>
+                <isDeleted>false</isDeleted>
+                <isVisible>true</isVisible>
+                <numberAnswer></numberAnswer>
+                <numberUnits></numberUnits>
+                <textAnswer>Por lo que la longitud de la ruta más corta es 10 y pasa por los vértices a − b − c − d − z</textAnswer>
+                <imageAnswer></imageAnswer>
+                <codeAnswer></codeAnswer>
+                <progLanguage></progLanguage>
+                <answerType>TEXT</answerType>
+                <isPractical>true</isPractical>
+                <procedure>
+                    <text></text>
+                    <image>https://www.dropbox.com/s/dlcd48yppc2u1mz/E30R.PNG?dl=0</image>
+                    <procedureType>IMAGE</procedureType>
+                </procedure>
+            </answer>
+        </answers>
+    </exercise>
+
+</exercises>
+
+

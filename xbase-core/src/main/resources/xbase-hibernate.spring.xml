@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-4.2.xsd"
+       default-init-method="init">
+
+    <bean id="pooledDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${xbase.jdbc.driver}"/>
+        <property name="jdbcUrl" value="${xbase.jdbc.url}"/>
+        <property name="user" value="${xbase.jdbc.username}"/>
+        <property name="password" value="${xbase.jdbc.password}"/>
+
+        <property name="testConnectionOnCheckout" value="true" />
+        <property name="testConnectionOnCheckin" value="false" />
+        <property name="preferredTestQuery" value="select 1"/>
+        <property name="idleConnectionTestPeriod" value="3600"/>
+
+        <property name="checkoutTimeout" value="1000"/>
+        <property name="initialPoolSize" value="50"/>
+        <property name="minPoolSize" value="50" />
+        <property name="acquireIncrement" value="25" />
+        <property name="maxPoolSize" value="4500" />
+        <property name="maxIdleTime" value="43200"/>
+        <property name="maxIdleTimeExcessConnections" value="300" />
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="pooledDataSource"/>
+        <property name="packagesToScan">
+            <list>
+                <value>cr.ac.ucr.ecci.ci1312.xbase.model</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${xbase.hibernate.dialect}</prop>
+                <prop key="hibernate.search.default.indexBase">${user.home}/xbase/indexes/</prop>
+                <prop key="hibernate.search.default.directory_provider">filesystem</prop>
+                <!--<prop key="hibernate.show_sql">true</prop>-->
+            </props>
+        </property>
+    </bean>
+
+    <!-- Below this is advanced, we will cover it later in the semester -->
+    
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- transaction configuration -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+
+    <bean class="org.springframework.transaction.interceptor.TransactionAttributeSourceAdvisor">
+        <property name="transactionInterceptor" ref="transactionInterceptor"/>
+        <property name="order" value="0"/>
+    </bean>
+
+    <bean id="transactionInterceptor"
+          class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="transactionAttributeSource">
+            <bean class="org.springframework.transaction.annotation.AnnotationTransactionAttributeSource"/>
+        </property>
+    </bean>
+
+    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="transactionManager"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

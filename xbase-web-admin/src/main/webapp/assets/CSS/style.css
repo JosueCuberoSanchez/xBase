@@ -1,0 +1,385 @@
+html {
+	height: 100% !important;
+}
+body {
+	position: relative;
+	height: 100%;
+	font-size: 14px;
+	color: #363940;
+}
+body .body {
+	height: 100%;
+}
+img.logo {
+  display: block;
+  position:relative;
+  top: 50px;
+  left: 25px;
+  z-index:2;
+}
+.cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0; /*ambos con px*/
+	top: 0;
+	background-color: rgba(0, 46, 82, 0.15);
+	padding: 20px;
+}
+.page {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 50px 0;
+}
+* {
+	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+}
+*:focus { 
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/* Begin Fonts */
+body {
+	 font-family: 'Roboto', Helvetica, Arial, sans-serif;
+ }
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+h1 {
+	font-size: 36px;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	font-size: 26px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+p {
+	font: 14px/1.5em "Roboto";
+}
+.navbar-nav > li > a {
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+/* End Fonts */
+
+.header-main {
+	margin-top:-30px;
+}
+
+.nav{
+	position:relative;
+	left:20px;
+	top:-3px;
+	/*overflow: hidden;*/
+    background-color: #ffffff;
+    /*position: fixed;*/	
+	opacity: 0.9;
+	font-size: 1.5em;
+	z-index:1;
+}
+ul {
+    list-style-type: none;
+	margin: 0 3em 0 0;
+	padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+	height: 2em;
+	margin-top: 1em;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;	
+}
+li div {
+	height: 2em;
+	margin-top: 1em;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #000000;
+	color: #ffffff;
+}
+.selectedmen{
+	border-bottom: solid 2px #000000; 
+}
+
+
+section {
+	position: relative;
+}
+.page-loader {
+	position: fixed;
+	left: 0; /*ambas con px*/
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	background: #FFF url('/assets/Images/page-loader.gif') center center no-repeat;
+}
+.devider {
+	width: 100%;
+	height: 23px;
+	background: url('/assets/Images/devider.png') no-repeat center center;
+	margin: 5px 0 10px;
+}
+.thumbnail {
+	padding: 15px;
+	margin-bottom: 20px;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	/*-ms-transition: all 0.2s ease-in-out;*/
+	transition: all 0.2s ease-in-out;
+}
+.form-control {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.parallax {
+	position: relative;
+	background: no-repeat fixed 0 0;
+	-webkit-background-size: cover;
+  	background-size: cover;
+}
+
+#header {
+	/* height: 98px; */
+}
+
+
+/* ===== Begin text colors ===== */
+.text-main { color: #363940; } /* Theme main color */
+.text-white { color: #FFF; }
+.text-off-white { color: #e7e7e7;}
+.text-dark { color: #000; }
+
+/* ===== Begin intro ===== */
+/* Begin text carousel intro */
+#text-carousel-intro-section {
+	height: 100%;
+}
+#text-carousel-intro-section .container {
+	height: 100%;
+}
+#text-carousel-intro-section .caption {
+	position: relative;
+	top: 50%;
+	margin-top: -70px;
+}
+#text-carousel-intro-section .caption h1 {
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-size: 60px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+#text-carousel-intro-section .caption p {
+	letter-spacing: 2px;
+	font-size: 16px;
+}
+/* End text carousel intro */
+/* ===== End intro ===== */
+
+
+/* ===== Begin roatet boxes ===== */
+/* Begin rotate box-1 */
+.rotate-box-1, .rotate-box-2 {
+	display: inline-block;
+	margin: 30px 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	/*-ms-transition: all 0.2s ease-in-out;*/
+	transition: all 0.2s ease-in-out;
+}
+a.rotate-box-1, a.rotate-box-2 {
+	text-decoration: none;
+	color: #363940;
+}
+a.rotate-box-1:hover, a.rotate-box-2:hover {
+	color: #676D75;
+}
+.rotate-box-1 .rotate-box-icon {
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 15px;
+	margin-right: 25px;
+	margin-top: 10px;
+	float:left;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	/*-ms-transition: all 0.2s ease-in-out;*/
+	transition: all 0.2s ease-in-out;
+}
+.rotate-box-1.square-icon .rotate-box-icon, .rotate-box-2.square-icon .rotate-box-icon {
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	color: #FFF !important;
+	font-size: 18px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.rotate-box-1.square-icon .rotate-box-icon:after, .rotate-box-2.square-icon .rotate-box-icon:after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	bottom: 3px;
+	left: 3px;
+	border: 2px solid #FFF;
+}
+.rotate-box-1:hover.square-icon .rotate-box-icon , .rotate-box-2:hover.square-icon .rotate-box-icon{
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.rotate-box-1.square-icon .rotate-box-icon .fa, .rotate-box-2.square-icon .rotate-box-icon .fa{
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	/*-ms-transition: all 0.2s ease-in-out;*/
+	transition: all 0.2s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.rotate-box-1:hover.square-icon .rotate-box-icon .fa, .rotate-box-2:hover.square-icon .rotate-box-icon .fa{
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+.rotate-box-1 .rotate-box-info a, .rotate-box-2 .rotate-box-info a {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	/*-ms-transition: all 0.2s ease-in-out;*/
+	transition: all 0.2s ease-in-out;
+}
+.rotate-box-1 h4, .rotate-box-2 h4 {
+	font-weight: 400;
+}
+.rotate-box-1 p {
+	padding: 0 10px;
+}
+.rotate-box-1 .rotate-box-info {
+	padding-left: 60px;
+}
+
+/* End rotate box-1 */
+
+
+/* Begin rotate box-2 */
+.rotate-box-2 .rotate-box-icon {
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 15px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	/*-ms-transition: all 0.2s ease-in-out;*/
+	transition: all 0.2s ease-in-out;
+}
+
+.rotate-box-2.square-icon .rotate-box-icon {
+	width: 75px;
+	height: 75px;
+	line-height: 75px;
+	font-size: 36px;
+}
+
+.rotate-box-2.square-icon .rotate-box-info {
+	margin-top: 30px;
+}
+/* End rotate box-2 */
+/* ===== End rotate boxes ===== */
+
+
+/* ===== Begin social ===== */
+
+#social-section {
+	padding: 80px 0;
+}
+ul.social-list {
+	text-align: center;
+	/*margin: 10 auto;*/
+}
+ul.social-list li{
+	display: inline-block;
+	margin-right: 180px;
+	margin-bottom:50px;
+}
+ul.social-list li .rotate-box-1 {
+	margin: 0;
+}
+ul.social-list li a i {
+	color: #fff;
+	font-size:20px;
+}
+
+.social_media {
+	position:relative;left:-130px;top:-70px;
+}
+
+/* ===== End social ===== */
+
+
+/* Scroll to top button */
+.scrolltotop {
+	position: fixed;
+	display: none;
+	bottom: 20px;
+	right: 30px;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	text-decoration: none;
+	z-index: 9999;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.scrolltotop .fa {
+	padding-left: 4px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/* ===== End buttons ===== */

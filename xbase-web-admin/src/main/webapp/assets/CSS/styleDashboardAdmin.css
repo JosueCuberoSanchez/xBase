@@ -1,0 +1,233 @@
+body{
+    background:#f2f2f2;
+    width: 100%;
+    font-family: 'Open Sans', serif;
+	/*font-size:30px;*/
+    overflow-x:hidden;
+    /*position: relative;*/
+    height: 100%;
+    font-size: 14px;
+    color: #363940;
+}
+img.logo {  
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  z-index:2;
+}
+.selectedmen{
+	border-bottom: solid 2px #000000; 
+}
+.nav{
+	overflow: hidden;
+    background-color: #ffffff;
+    position: fixed; 
+    top: 0;
+	left: 0;
+    width: 100%;	
+	opacity: 0.9;
+	font-size: 1em;
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0 3em 0 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.nav li {
+    float: right;
+}
+
+.nav li a {
+    display: block;
+	height: 2em;
+	margin-top: 1em;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;	
+}
+ .nav li div {
+	height: 2em;
+	margin-top: 1em;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav li a:hover {
+    background-color: #000000;
+	color: #ffffff;
+}
+
+span.reference{
+    position:fixed;
+    left:10px;
+    bottom:10px;
+    font-size:1em;
+}
+span.reference a{
+    color:#aaa;
+    text-transform:uppercase;
+    text-decoration:none;
+    text-shadow:1px 1px 1px #000;
+    margin-right:30px;
+}
+span.reference a:hover{
+    color:#ddd;
+}
+ul.sdt_menu{
+    margin-top:150px;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+ul.sdt_menu{
+    margin:0;
+    padding:0;
+    list-style: none;
+    width:1080px;
+}
+ul.sdt_menu a{
+    text-decoration:none;
+    outline:none;
+}
+ul.sdt_menu li{
+    float:left;
+    width:170px;
+    height:170px;
+	text-align:center;
+	margin:5px;
+    position:relative;
+    cursor:pointer;
+}
+ul.sdt_menu li > a{
+    position:absolute;
+    top:0;
+    left:0;
+    width:170px;
+    height:170px;
+    z-index:12;
+    background:transparent url(../Images/overlay.png) no-repeat bottom right;
+    -moz-box-shadow:0 0 2px #000 inset;
+    -webkit-box-shadow:0 0 2px #000 inset;
+    box-shadow:0 0 2px #000 inset;
+    /*muchos px*/
+}
+ul.sdt_menu li a img{
+    border:none;
+    position:absolute;
+    width:0;
+    height:0;
+    bottom:0;
+    left:85px;
+    z-index:100;
+    -moz-box-shadow:0 0 4px #000;
+    -webkit-box-shadow:0 0 4px #000;
+    box-shadow:0 0 4px #000;
+    /*muchos px*/
+}
+ul.sdt_menu li span.sdt_wrap{
+    position:absolute;
+    top:65px;
+    left:0; /*px*/
+	margin:10px;
+    z-index:15;
+}
+ul.sdt_menu li span.sdt_active{
+    position:absolute;
+    background:#111;
+    top:170px;
+    width:170px;
+    height:0;
+    left:0;
+    z-index:14;
+    -moz-box-shadow:0 0 4px #000 inset;
+    -webkit-box-shadow:0 0 4px #000 inset;
+    box-shadow:0 0 4px #000 inset;
+    /*Muchos px*/
+}
+ul.sdt_menu li span span.sdt_link, ul.sdt_menu li span span.sdt_descr,
+ul.sdt_menu li div.sdt_box a{    
+	display:block;
+	margin-left:-10px;
+	text-align:center;
+	width:170px;
+    text-transform:uppercase;
+}
+ul.sdt_menu li div.sdt_box a.a{
+    width:250px;
+}
+ul.sdt_menu li span span.sdt_link{
+    color:#fff;
+    font-size:1em;
+	text-align:center;
+}
+ul.sdt_menu li span span.sdt_descr{
+    color:#0B75AF;
+    width:170px; /*For dumbass IE7*/
+    font-size:10px;
+    letter-spacing:1px;
+}
+ul.sdt_menu li div.sdt_box{
+    position:absolute;
+    width:250px;
+    overflow:hidden;
+    height:170px;
+    top:170px;
+    left:0; /*px*/
+    display: none;
+    background:#000;
+}
+
+ul.sdt_menu li div.sdt_box a{
+    float:left;
+    clear:both;
+    line-height:30px;
+    color:#0B75AF;
+}
+ul.sdt_menu li div.sdt_box a:first-child{
+    margin-top:15px;
+}
+ul.sdt_menu li div.sdt_box a:hover{
+    color:#fff;
+}
+
+.twitter{
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.wr{
+    position:absolute;
+    bottom: 40px;
+    right: -305px;
+}
+#li1{	
+	background-color:#00324B;
+}
+#li2{	
+	background-color:#00324B;
+}
+#li3{	
+	background-color:#00324B;	
+}
+#li4{	
+	background-color:#00324B;
+}
+#li5{	
+	background-color:#00324B;
+}
+#li6{	
+	background-color:#00324B;	
+}

@@ -1,0 +1,195 @@
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Plataforma de ejercicios xBase" />
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases" />
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleDashboardStudents.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/Fonts/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/Fonts/slick/slick-theme.css"/>
+    </head>
+    <body class="homepage">
+    <div id="fb-root"><!-- --></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&amp;version=v2.9";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <a href="${pageContext.request.contextPath}/student/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoStudentsMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li><div>|</div></li>
+            <li><a href="${pageContext.request.contextPath}/student/about.html">Acerca de</a></li>
+            <li><a href="${pageContext.request.contextPath}/student/student.html">Cuenta</a></li>
+            <li class="selectedmen"><a  href="${pageContext.request.contextPath}/student/dashboard.html">Página Principal</a></li>
+            <li><a href="${pageContext.request.contextPath}/student/StatisticsStudents.html">Estadísticas</a></li>
+        </ul>
+    </nav>
+    <div class="parallax" id="ht">
+        <div id="group1" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <form action="${pageContext.request.contextPath}/student/search.html">
+                    <input type="text" name="search" placeholder="Buscar" />
+                </form>
+
+                <section class="midcontainer">
+                    <a href="#ht" class="blue" onclick="document.getElementById('id1').style.height = '100px'"><!-- --></a>
+                    <a href="#ht" class="orange" onclick="document.getElementById('id1').style.height = '100px'"><!-- --></a>
+                    <a href="#ht" class="green" onclick="document.getElementById('id1').style.height = '100px'"><!-- --></a>
+                </section>
+                <img id="id1" onClick="smoothScroll(document.getElementById('group2'))" src="${pageContext.request.contextPath}/assets/Images/ScrollDown.png" alt=""/>
+            </div>
+        </div>
+        <div id="group2" class="parallax__group group2">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="tit">Tus<div style="font-size: 0.4em; display: inline-block;">ejercicios</div></div>
+            </div>
+            <div id="img" class="parallax__layer parallax__layer--back">
+                <img src="${pageContext.request.contextPath}/assets/Images/Background.jpg" alt="" class="ip"/>
+            </div>
+        </div>
+        <div id="group3" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="your-class">
+                    <c:forEach items="${student.favorites}" var="item">
+                    <div>
+                        <a href="${pageContext.request.contextPath}/student/exercise.html">
+                            <div class="results">
+                                <div class="enunciados">
+                                     ${item.problem}
+                                </div>
+                                <div class="info">
+                                    <div class="topcont">
+                                        <div class="SOLVED">
+                                            <!-- ver que se hace con el estado, ocupo sacarle el id al ejercicio, pero aca no puedo hacer finds
+                                            para hacer la consulta SQL del estado${exerciseState.state}-->
+                                        </div>
+                                        <c:when test="${item.difficulty eq 'EASY'}">
+                                            <div class="difficultyE"><!-- EASY, MEDIUM, ADVANCED, COMPLEX-->
+                                            </div>
+                                        </c:when>
+                                        <c:when test="${item.difficulty eq 'MEDIUM'}">
+                                            <div class="difficultyM"><!-- -->
+                                            </div>
+                                        </c:when>
+                                        <c:when test="${item.difficulty eq 'ADVANCED'}">
+                                            <div class="difficultyH"><!-- -->
+                                            </div>
+                                        </c:when>
+                                        <c:when test="${item.difficulty eq 'COMPLEX'}">
+                                            <div class="difficultyC"><!-- -->
+                                            </div>
+                                        </c:when>
+                                    </div>
+                                    <div class="rating">
+                                        <c:forEach begin="0" end="5" step="1" var="i">
+                                            <c:choose>
+                                                <!--  test="${item.type eq 'TEXT'}" -->
+                                                <c:when test="${i le item.averageRating}" >
+                                                    <span>★</span>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <span>☆</span>
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </c:forEach>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    </c:forEach>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"><!-- --></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"><!-- --></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/assets/Fonts/slick/slick.min.js"><!-- --></script>
+	
+	<script type="text/javascript">
+	window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}	
+	</script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.your-class').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+        });
+    </script>
+    </body>
+    </html>
+</jsp:root>

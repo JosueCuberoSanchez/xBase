@@ -1,0 +1,456 @@
+html {
+	background:#f2f2f2;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:#262626;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:#262626;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:#262626;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:#262626;
+}
+:-ms-input-placeholder { /* Microsoft Edge */
+   color:#262626;
+}
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+}
+body {	
+	width: 100%;
+	font-family: 'Open Sans', serif;
+	/*font-size:30; COMENTADO*/
+	overflow-x: hidden;
+}
+img.logo {  
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  z-index:2;
+}
+img.newadmin{
+   position: absolute;
+   top: 40%;
+   right: 10%;
+}
+img.tpedit{
+   position: absolute;
+   top: 55px;
+   left: -25px;
+}
+.log{	
+	display: block;
+	position: absolute;
+  	bottom: 30px;
+	color:#ffffff;
+	left:45px;
+}
+input.inText {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;/*px*/
+  color:#ffffff;
+  width : 300px;
+  border: hidden;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;  
+  background-color: transparent;
+  -webkit-appearance: none;  
+}
+input.inNum {
+  display:inline-block;
+  color:#ffffff;
+  width : 70px;
+  height: 20px;
+  border: hidden;
+  border-left: 1px solid #ffffff;  
+  border-radius: 0;  
+  background-color: transparent;
+  -webkit-appearance: none;
+  float: left;
+}
+input.inName {
+  display:inline-block;
+  color:#ffffff;
+  width : 99px;
+  height: 20px;
+  border: hidden;
+  border-bottom:1px solid #ffffff;
+  border-radius: 0;  
+  background-color: transparent;
+  -webkit-appearance: none;
+  float: left;
+}
+.date{
+	display:inline-block;
+	width: 300px;
+}
+.name{
+	display:inline-block;
+	width: 300px;
+	margin-bottom: 19px;
+}
+button.mSubmit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width : 300px;  
+  height: 80px;
+  background: #0086cb;
+  border: hidden;
+  border-radius: 0;  
+  -webkit-appearance: none;
+  text-align: center;
+  color: #FFFFFF;
+}
+button.mSubmit:hover{
+  background: #ffffff;
+  color:#0086cb;
+}
+button, input, select, textarea :active {
+  outline: none;
+}
+
+button, input, select, textarea {
+	font-family: Gotham, serif;
+  font-size   : 15px;  
+}
+.nav{
+	overflow: hidden;
+    background-color: #ffffff;
+    position: fixed; 
+    top: 0;
+	left: 0;
+    width: 100%;	
+	opacity: 0.9;
+	font-size: 1em;
+}
+ul {
+    list-style-type: none;
+	margin: 0 3em 0 0;
+	padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+	height: 2em;
+	margin-top: 1em;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;	
+}
+li div {
+	height: 2em;
+	margin-top: 1em;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #000000;
+	color: #ffffff;
+}
+.explanation{
+	color: #0F0F0F;
+	font-size: 1.2em;
+	width: 40%;
+	margin-left: 45%;
+	margin-top: 15%;
+	text-align: center;
+}
+.subtitle{
+	color: #A8A8A8;
+	font-size: 1em;
+	margin-bottom: 15px;
+}
+.canswer{
+	color: #ffffff;
+	font-size: 0.8em;
+	margin-left: 20px;
+}
+.contop{
+	margin-top: 10px;
+	margin-right: 0;/*px*/
+	display: flex;
+	justify-content:center;
+}
+.accept{
+	background-color: #74C71C;
+	font-size: 1em;
+	display: inline-block;
+	padding: 30px 0; /*px*/
+	width: 150px;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;	
+	margin-left: 430px;
+}
+.reject{
+	background-color: #828282;
+	font-size: 1em;
+	display: inline-block;
+	padding: 30px 0; /*px*/
+	color: #ffffff;
+	width: 150px;
+	text-align: center;
+	text-decoration: none;
+	
+}
+.options{
+	
+	margin-top: 50px;
+	font-size: 0.9em;
+	display: inline-block;
+	color: #262626;
+	text-align: left;
+	text-decoration: none; 
+	margin-left: 10px;
+}
+.accept:hover{
+	background-color: #000000;
+	color:#ffffff;	
+}
+.reject:hover{
+	background-color: #000000;
+	color:#ffffff;
+}
+.edittxt{
+	margin-left: 475px;
+	width: 500px;
+	height: 200px;
+	display: inline-block;
+}
+.edittxt2{
+	margin-left: 475px;
+	margin-right: 10px;
+	width: 500px;
+	height: 200px;
+	margin-top: 0; /*px*/
+	display:inline-block;
+}
+.wrapper{	
+	width: 100%;
+	margin-top: 100px;
+	display: flex;	
+	justify-content: center;
+}
+.proc{
+	margin-top: 10px;
+	display: flex;	
+	justify-content: center;
+	height: 0; /*px*/
+	visibility: hidden;
+	overflow: hidden;
+	-webkit-transition: height 0.4s ease-in-out;
+    transition: height 0.4s ease-in-out;
+}
+.icos{
+	width: 36px;
+	height: 36px;
+	border-radius: 5px;
+	background-color: #868686;
+}
+.icos:active{
+	border: solid 1px #ffffff;
+}
+.icos:hover{
+	background-color: #000000 !important;
+}
+.icoscomp{
+	width: 36px;
+	height: 36px;
+	border-radius: 5px;
+	margin-top: 168px;
+	background-color: #868686;
+}
+.icoscomp:active{
+	border: solid 1px #ffffff;
+}
+.icoscomp:hover{
+	background-color: #000000 !important;
+}
+.subtitle{
+	color: #A8A8A8;
+	font-size: 1em;
+	margin-bottom: 15px;
+}
+.canswer{
+	color: #ffffff;
+	font-size: 0.8em;
+	margin-left: 20px;
+}
+.results{
+	display: inline-block;
+	height: 300px; 
+	width:300px;	
+	margin-left: 20px;
+	color:#262626;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+.results:hover{
+	background-color: #292828;
+	color: #ffffff;
+}.enunciados{
+	margin-top: 100px;
+	width: 90%;
+	margin-left: 20px;
+	height: 100px;
+	overflow: hidden;
+	font-size: 0.8em;
+}
+.info{
+	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: #161616;
+	color:#ffffff;
+	height: 50px;	
+	margin-top: 50px;
+	width: 100%;	
+}
+.topcont{
+	display: block;
+	width: 100%;
+}
+.SOLVED{
+	margin-top: -30px;
+	margin-left: 90px;
+}
+.SOLVEDH{
+	margin-top: -30px;
+	margin-left: 90px;
+	visibility: hidden;
+}
+.difficultyH{
+	height: 33px;
+	width: 80px;
+	background: url('../../assets/Images/DifficultyHard.png') no-repeat;
+	margin-left: 5px;
+}
+.difficultyE{
+	height: 33px;
+	width: 80px;
+	background: url('../../assets/Images/DifficultyEasy.png') no-repeat;
+	margin-left: 5px;	
+}
+.difficultyM{
+	height: 33px;
+	width: 80px;
+	background: url('../../assets/Images/DifficultyMedium.png') no-repeat;
+	margin-left: 5px;
+}
+.rating {  
+  float:right;
+	margin-top: -10px;
+  text-align: left;
+  color:#D4C328;
+  font-size: 25px;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.detail{
+	width: 400px;
+	background: #666666;
+	position:fixed;
+	bottom:0; /*px*/
+	left: 30px;
+	height: 100%;
+	z-index: -1;
+	opacity:1;
+}
+.foot{
+	width: 300px;
+	display: block;
+	background-color: transparent;
+	position:absolute;
+  	top:100px;
+	left: 55px;
+	
+}
+.base{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.leng{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.dropdown {    
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+.dropdown:active{
+	border: solid 1px #ffffff;
+}
+.dropdown:hover{
+	background-color: #000000 !important;
+}
+.dropbtn {
+    width: 36px;
+	height: 36px;
+	border-radius: 5px;
+	background-color: #868686;
+    color: white;
+    font-size: 30px;
+	text-align: left;
+	padding-left: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #ffffff;
+	color:#000000;
+}

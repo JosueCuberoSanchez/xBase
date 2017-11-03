@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xbase.iml" filepath="$PROJECT_DIR$/xbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xbase-core/xbase-core.iml" filepath="$PROJECT_DIR$/xbase-core/xbase-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xbase-web-admin/xbase-web-admin.iml" filepath="$PROJECT_DIR$/xbase-web-admin/xbase-web-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xbase-web-student/xbase-web-student.iml" filepath="$PROJECT_DIR$/xbase-web-student/xbase-web-student.iml" />
+    </modules>
+  </component>
+</project>

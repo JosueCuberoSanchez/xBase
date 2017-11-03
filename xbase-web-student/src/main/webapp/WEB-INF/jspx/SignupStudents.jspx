@@ -1,0 +1,134 @@
+<!--
+  Created by IntelliJ IDEA.
+  User: Ian
+  Date: 6/23/2017
+  Time: 2:35 PM
+  To change this template use File | Settings | File Templates.
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0">
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Plataforma de ejercicios xBase" />
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases" />
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleSignupStudents.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/student/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoStudentsMin.png" alt="" class="logo"/>
+    </a>    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/login.html">Entrar</a></li>
+            <li><a href="${pageContext.request.contextPath}/aboutLoginRegister.html">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <img src="${pageContext.request.contextPath}/assets/Images/NoMore.png" class="nomore" alt=""/>
+    <section class="detail"><!-- -->
+    </section>
+    <section class="foot">
+        <p class="error">*Verifique los campos</p>
+        <form  class="log" action="${pageContext.request.contextPath}/login.html" method="post" onsubmit="return checkForm(this);">
+            <input class="inText" name="name" placeholder="Nombre"/><br/>
+            <input class="inText" name="lastName" placeholder="Apellido"/><br/>
+            <input class="inText" name="sLastName" placeholder="Segundo Apellido"/><br/>
+            <input class="inText" name="username" placeholder="Correo"/><br/>
+            <input type="password" class="inText" name="pass" placeholder="Contraseña"/><br/>
+            <input type="password" class="inText" name="pass2" placeholder="Reingrese su contraseña"/><br/>
+            <input class="inText" name="studentId" placeholder="Carné"/>
+            <p>Birth date:</p>
+            <section class="date">
+                <input type= "number" class="inNum" name="bDay" placeholder="Día"/>
+                <input type= "number" class="inNum" name="bMonth" placeholder="Mes"/>
+                <input type= "number" class="inNum" name="bYear" placeholder="Año"/>
+            </section>
+            <button class="mSubmit">Registrarme en xBase</button>
+        </form>
+    </section>
+    </body>
+    </html>
+
+    <script type="text/javascript">
+        function checkForm(form) {
+            if(form.name.value === "") {
+                alert("Todos los campos son obligatorios, ingrese su nombre.");
+                form.name.focus();
+                return false;
+            }
+            if(form.lastName.value === "") {
+                alert("Todos los campos son obligatorios, ingrese su apellido.");
+                form.lastName.focus();
+                return false;
+            }
+            if(form.sLastName.value === "") {
+                alert("Todos los campos son obligatorios, ingrese su segundo apellido.");
+                form.sLastName.focus();
+                return false;
+            }
+            if(form.username.value === "") {
+                alert("Todos los campos son obligatorios, ingrese su correo.");
+                form.username.focus();
+                return false;
+            }
+            if(form.pass.value === "") {
+                alert("Todos los campos son obligatorios, ingrese su contraseña.");
+                form.pass.focus();
+                return false;
+            }
+            if(form.pass2.value === "") {
+                alert("Todos los campos son obligatorios, rellene el segundo campo de contraseña.");
+                form.pass2.focus();
+                return false;
+            }
+            if(form.studentId.value === "") {
+                alert("Todos los campos son obligatorios, ingrese su carnet.");
+                form.studentId.focus();
+                return false;
+            }
+            re = /^([a-z0-9!#$%&amp;'*+=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b)$/
+            if(!re.test(form.username.value)) {
+                alert("Error: Ingrese un correo válido");
+                form.username.focus();
+                return false;
+            }
+            re = /^([0-9]|1[0-9]|2[0-9]|3(0|1))$/;
+            if(!re.test(form.bDay.value)) {
+                alert("Error: Ingese un día válido");
+                form.bDay.focus();
+                return false;
+            }
+            re = /^([0-9]|1(0|1|2))$/;
+            if(!re.test(form.bMonth.value)) {
+                alert("Error: Ingese un mes válido");
+                form.bMonth.focus();
+                return false;
+            }
+            re = /^(19[0-9][0-9]|200[0-9]|201[0-7])$/;
+            if(!re.test(form.bYear.value)) {
+                alert("Error: Ingese un año válido");
+                form.bYear.focus();
+                return false;
+            }
+            re = /^((?=.*[0-9])[a-zA-Z0-9]{8,20})$/;
+            if(!re.test(form.pass.value)) {
+                alert("Error: La contraseña debe tener mínimo 8 caracteres" +
+                    " y al menos un número, y no debe empezar por este número");
+                form.pass.focus();
+                return false;
+            }
+            if(form.pass.value !== form.pass2.value) {
+                alert("Error: Las contraseñas ingresadas no coinciden");
+                form.pass.focus();
+                return false;
+            }
+        }
+    </script>
+</jsp:root>

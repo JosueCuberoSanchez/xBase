@@ -1,0 +1,33 @@
+<references>
+	<book> <title>Discrete Mathematics and its Application</title> <isbn>0-07-338309-0</isbn> <year>2012</year> <editorial>McGraw-Hill</editorial> </book>
+	<book> <title>Discrete Mathematics</title> <isbn>0-13-117686-2</isbn> <year>2005</year> <editorial>Prentice Hall</editorial> </book>
+	<book> <title>Discrete Mathematical Structures</title> <isbn>0-13-320912-1</isbn> <year>1996</year> <editorial>Prentice Hall</editorial> </book>
+	<book> <title>Theory and Problems of Discrete Mathematics</title> <isbn>0-07-151101-6</isbn> <year>2007</year> <editorial>McGraw-Hill</editorial> </book>
+	<book> <title>Discrete Mathematics Elementary and Beyond</title> <isbn>0-387-95584-4</isbn> <year>2003</year> <editorial>Springer</editorial> </book>
+	<book> <title>Discrete Mathematics and ItsApplications</title> <isbn>978-0073229720</isbn> <year>2012</year> <editorial>McGraw Hill</editorial> </book>
+	<book> <title>Probabilidad y Estadística aplicadas a la Ingeniería </title> <isbn>978-1118539712</isbn> <year>2002</year> <editorial>Wiley</editorial> </book>
+	<book> <title>Probabilidad y Estadística para Ingeniería </title> <isbn>978-9702405535</isbn> <year>2005</year> <editorial>Compañía Editorial Continental</editorial> </book>
+	<book> <title>Introducción a la probabilidad y estadística</title> <isbn>9706867945</isbn> <year>2002</year> <editorial>Cengage Learning</editorial> </book>
+	<book> <title>Probabilidad y Estadística con aplicaciones para ingeniería y ciencias computacionales</title> <isbn>9701043081</isbn> <year>2004</year> <editorial>McGraw-Hill Interamericana</editorial> </book>
+	<book> <title>Probabilidad y Estadística para Ingenieros de Miller y Freund</title> <isbn>9666708308</isbn> <year>2004</year> <editorial>Pearson Educación</editorial> </book>
+	<book> <title>Probability and Statistics for Engineers</title> <isbn>978-0321986245</isbn> <year>2016</year> <editorial>Pearson</editorial> </book>
+	<book> <title>Probability, Markov Chains, Queues, and Simulation: The Mathematical Basis of Performance Modeling</title> <isbn>978-0691140629</isbn> <year>2009</year> <editorial>Princeton University Press</editorial> </book>
+	<book> <title>Investigacion de Operaciones</title> <isbn>9786073207966</isbn> <year>2011</year> <editorial>Pearson Education Inc.</editorial> </book>
+	<book> <title>Fundamentos de investigación de investigación de operaciones</title> <isbn>9786071511997</isbn> <year>2010</year> <editorial>McGraw-Hill Interamericana Editores</editorial> </book>
+	<book> <title>Investigacion de Operaciones</title> <isbn>9786073207966</isbn> <year>2011</year> <editorial>Pearson Education Inc.</editorial> </book>
+	<book> <title>Operations Research Applications and Algorithms</title> <isbn>0534520200</isbn> <year>2004</year> <editorial>Thomson Brooks/Cole</editorial> </book>
+	<book> <title>Estructuras de datos y análisis de algoritmos </title> <isbn>968-444-345-5</isbn> <year>1998</year> <editorial>Addison Wesley Longman de México</editorial> </book>
+	<book> <title>A Concise Introduction to Data Structures Using Java</title> <isbn>978-1-4665-8990-2</isbn> <year>2013</year> <editorial>CRC Press</editorial> </book>
+	<book> <title>Applied Discrete Structures,Version 2.0 13th</title> <isbn>978-1-1055-5929-7</isbn> <year>2013</year> <editorial>NULL</editorial> </book>
+	<book> <title>Essential Algorithms: A Practical Approach to Computer Algorithms</title> <isbn>978-1-118-61210-1</isbn> <year>2013</year> <editorial>John Wiley and Sons, Inc.</editorial> </book>
+	<booklet> <title>Apuntes para el Curso Cálculo II MA-1002 de la Universidad de Costa Rica</title> <year>2015</year> </booklet>
+	<booklet> <title>Ejercicios Resueltos de Estadística: Tema 4: Probabilidades y Variables aleatorias </title> <year>2016</year> </booklet>
+	<booklet> <title>Apuntes para el curso MA-0293 Calculo 1 para Computación</title> <year>2016</year> </booklet>
+	<ownElaboration> <elabYear>2015</elabYear> </ownElaboration>
+	<ownElaboration> <elabYear>2016</elabYear> </ownElaboration>
+	<ownElaboration> <elabYear>1990</elabYear> </ownElaboration>
+	<ownElaboration> <elabYear>1991</elabYear> </ownElaboration>
+	<ownElaboration> <elabYear>1992</elabYear> </ownElaboration>
+	<ownElaboration> <elabYear>2017</elabYear> </ownElaboration>
+	<ownElaboration> <elabYear>1995</elabYear> </ownElaboration>
+</references>

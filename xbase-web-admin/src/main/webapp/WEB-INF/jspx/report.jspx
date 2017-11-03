@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <script type="text/javascript" async=""
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+        </script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Plataforma de ejercicios xBase" />
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases" />
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleReport.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li><div>|</div></li>
+            <li><a href="${pageContext.request.contextPath}/admin/admin.html">Cuenta</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/dashboard.html">Página Principal</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/studentList.html">Estudiantes</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <div class="explanation">${report.explanation}</div>
+    </div>
+    <div class="contop"><a href="${pageContext.request.contextPath}/admin/reportList.html" class="accept">Aceptar</a><a href="${pageContext.request.contextPath}/admin/reportList.html" class="reject">Rechazar</a></div>
+    <section class="detail"><!-- -->
+    </section>
+    <section class="foot">
+        <div class="subtitle">Respuesta actual:</div>
+
+        <c:when test="${answer.type eq 'TEXT'}">
+            <div class="canswer">${answer.content}</div>
+        </c:when>
+        <c:when test="${answer.type eq 'IMAGE'}">
+            <div class="canswer">${answer.imagePath}</div><!-- hacer algo con el path-->
+        </c:when>
+        <c:when test="${answer.type eq 'NUMERIC'}">
+            <div class="canswer">${answer.numericalAnswer} ${answer.unit}</div>
+        </c:when>
+        <c:when test="${answer.type eq 'CODE'}">
+            <div class="canswer">
+                Código Fuente:<br><!-- --></br> ${answer.sourceCode}<br><!-- --></br> Lenguaje: ${answer.programmingLanguage}
+            </div>
+        </c:when>
+
+        <div class="subtitle">De:</div>
+        <a href="${pageContext.request.contextPath}/admin/adminExercise.html">
+            <div class="results">
+                <div class="enunciados">
+                    ${exercise.problem}
+                </div>
+                <div class="info">
+                    <div class="topcont">
+                        <div class="difficultyE"><!-- -->
+                        </div>
+                        <div class="SOLVEDH">
+                            SOLVED
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <c:forEach begin="0" end="5" step="1" var="i">
+                            <c:choose>
+                                <c:when test="i < ${exercise.averageRating}" >
+                                    <span>★</span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span>☆</span>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+    </body>
+    </html>
+</jsp:root>

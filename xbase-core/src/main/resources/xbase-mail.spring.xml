@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd"
+       default-init-method="init">
+
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="resourceLoaderPath" value="classpath:templates/"/>
+        <property name="preferFileSystemAccess" value="false"/>
+        <property name="velocityProperties">
+            <value>
+                input.encoding = UTF-8
+                output.encoding = UTF-8
+                velocimacro.library = macros.vm
+                velocimacro.library.autoreload = true
+            </value>
+        </property>
+    </bean>
+
+    <!--<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">-->
+        <!--<property name="host" value="${xbase.mail.default.host}"/>-->
+        <!--<property name="port" value="${xbase.mail.default.port}"/>-->
+        <!--<property name="username" value="${xbase.mail.default.username}"/>-->
+        <!--<property name="password" value="${xbase.mail.default.password}"/>-->
+    <!--</bean>-->
+
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="${xbase.mail.default.host}"/>
+        <property name="port" value="${xbase.mail.default.port}"/>
+        <property name="protocol" value="smtps"/>
+        <property name="username" value="xbaseucr@gmail.com"/>
+        <property name="password" value="xbaseucr2017"/>
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtps.auth">true</prop>
+                <prop key="mail.smtps.starttls.enable">true</prop>
+                <prop key="mail.smtps.debug">true</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

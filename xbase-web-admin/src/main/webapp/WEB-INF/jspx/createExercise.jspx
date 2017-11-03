@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <head>
+        <title>xBase</title>
+        <script type="text/javascript" async=""
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+        </script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Plataforma de ejercicios xBase" />
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases" />
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleEditExercise.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li><div>|</div></li>
+            <li><a href="${pageContext.request.contextPath}/admin/admin.html">Cuenta</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/dashboard.html">Página principal</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/studentList.html">Usuarios</a></li>
+        </ul>
+    </nav>
+
+    <form action="${pageContext.request.contextPath}/admin/saveExercise.html" method="post">
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <a href="#" class="okpop">
+                    x
+                </a>
+                <label>
+                    <input class="okpop" type="radio" name="difficulty" value="EASY" checked="checked"/>
+                    <img src="${pageContext.request.contextPath}/assets/Images/DifficultyEasy.png" alt=""/>
+                </label>
+                <label>
+                    <input class="okpop" type="radio" name="difficulty" value="MEDIUM"/>
+                    <img src="${pageContext.request.contextPath}/assets/Images/DifficultyMedium.png" alt=""/>
+                </label>
+                <label>
+                    <input class="okpop" type="radio" name="difficulty" value="ADVANCED"/>
+                    <img src="${pageContext.request.contextPath}/assets/Images/DifficultyHard.png" alt=""/>
+                </label>
+                <label>
+                    <input class="okpop" type="radio" name="difficulty" value="COMPLEX"/>
+                    <img src="${pageContext.request.contextPath}/assets/Images/DifficultyComplex.png" alt=""/>
+                </label>
+            </div>
+
+        </div>
+        <section class="fullamount">
+            <textarea id="problem" name="problem" class="exer">Escribe el enunciado aquí</textarea>
+        </section>
+        <div id="info">
+            <div id="tpinfo">
+                <div class="topcont">
+                    <a href="#popup1">
+                        <div class="difficultyE" id="buttondif"><!-- -->
+                        </div>
+                    </a>
+                </div>
+                Temas a escoger:
+            </div>
+            <div id="temas">
+                <div class="theme">
+                    <c:forEach items="${topics}" var="topic">
+                        ${topic.name}
+                        <br> <!----> </br>
+                    </c:forEach>
+                </div>
+            </div>
+        </div>
+        <div class="contop">
+            <button type="submit" class="accept">Guardar</button><a href="${pageContext.request.contextPath}/admin/dashboard.html" class="reject">Descartar</a>
+        </div>
+    </form>
+    </body>
+    </html>
+</jsp:root>

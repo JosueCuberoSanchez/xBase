@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cuenta Admin</title>
+        <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Preview page of Metronic Admin Theme #1 for user account page" name="description"/>
+        <meta content="" name="author"/>
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <!-- 700&sub -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/Javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/componentss.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/plugins.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <!-- BEGIN PAGE LEVEL STYLES -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/profile.min.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL STYLES -->
+        <!-- BEGIN THEME LAYOUT STYLES -->
+        <link href="${pageContext.request.contextPath}/assets/CSS/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="${pageContext.request.contextPath}/assets/CSS/styleStudentInfo.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME LAYOUT STYLES -->
+        <!--<link rel="shortcut icon" href="favicon.ico" />-->
+    </head>
+    <!-- END HEAD -->
+
+    <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white page-sidebar-closed">
+    <div class="page-wrapper">
+
+
+        <!-- BEGIN PAGE TITLE-->
+        <header id="header" class="header-main">
+            <!-- Begin Navbar -->
+            <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+                <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+            </a>
+            <nav class="navhead">
+                <ul class="ulhead">
+                    <li class="li1"><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+                    <li class="li2"><div class="div2">|</div></li>
+                    <li class="li0"><a href="${pageContext.request.contextPath}/admin/student.html?id=${student.id}">Volver</a></li>
+                    <li class="selectedmen"><a href="${pageContext.request.contextPath}/admin/dashboard.html">Página principal</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br/>
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BEGIN PROFILE SIDEBAR -->
+
+                <!-- END BEGIN PROFILE SIDEBAR -->
+                <!-- BEGIN PROFILE CONTENT -->
+                <div class="profile-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portlet light ">
+                                <div class="portlet-title tabbable-line">
+                                    <div class="caption caption-md">
+                                        <i class="icon-globe theme-font hide"><!-- --></i>
+                                        <span class="cuentaTexto">Cuenta</span>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#tab_1_1" data-toggle="tab">Información personal</a>
+                                        </li>
+                                        <!--<li>
+                                            <a href="#tab_1_2" data-toggle="tab">Change Avatar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#tab_1_3" data-toggle="tab">Cambiar contraseña</a>
+                                        </li>-->
+                                    </ul>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="tab-content">
+                                        <!-- PERSONAL INFO TAB -->
+                                        <div class="tab-pane active" id="tab_1_1">
+                                            <form role="form" action="#">
+                                                <div class="form-group">
+                                                    <label class="control-label">Primer Nombre</label>
+                                                    <input type="text" placeholder="${student.name}" class="form-control" /> </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Apellido</label>
+                                                    <input type="text" placeholder="${student.lastName}" class="form-control" /> </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Segundo Apellido</label>
+                                                    <input type="text" placeholder="${student.secondLastName}" class="form-control" /> </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Email</label>
+                                                    <input type="text" placeholder="${student.username}" class="form-control" /> </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Fecha de Nacimiento</label>
+                                                    <input type="text" placeholder="${student.birthDate.toString()}" class="form-control" /> </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Estado</label>
+                                                    <input type="text" placeholder="${student.status}" class="form-control" /> </div>
+                                                <div class="margiv-top-10">
+                                                    <a href="javascript:;" class="btn green">Guardar cambios</a>
+                                                    <a href="javascript:;" class="btn default"> Cancelar </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- END PERSONAL INFO TAB -->
+                                        <!-- CHANGE AVATAR TAB -->
+                                        <div class="tab-pane" id="tab_1_2">
+                                            <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. </p>
+                                            <form action="#" role="form">
+                                                <div class="form-group">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
+                                                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"><!-- --> </div>
+                                                        <div>
+                                                                            <span class="btn default btn-file">
+                                                                                <span class="fileinput-new"> Select image </span>
+                                                                                <span class="fileinput-exists"> Change </span>
+                                                                                <input type="file" name="..."/> </span>
+                                                            <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix margin-top-10">
+                                                        <span class="label label-danger">NOTE! </span>
+                                                        <span>Attached image thumbnail is supported in Latest Firefox, Chrome, Opera, Safari and Internet Explorer 10 only </span>
+                                                    </div>
+                                                </div>
+                                                <div class="margin-top-10">
+                                                    <a href="javascript:;" class="btn green"> Submit </a>
+                                                    <a href="javascript:;" class="btn default"> Cancel </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- END CHANGE AVATAR TAB -->
+                                        <!-- CHANGE PASSWORD TAB -->
+                                        <div class="tab-pane" id="tab_1_3">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label class="control-label">Ingrese su contraseña actual</label>
+                                                    <input type="password" class="form-control" /> </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Ingrese una nueva contraseña</label>
+                                                    <input type="password" class="form-control" /> </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Ingrese de nuevo su nueva contraseña</label>
+                                                    <input type="password" class="form-control" /> </div>
+                                                <div class="margin-top-10">
+                                                    <a href="javascript:;" class="btn green"> Cambiar </a>
+                                                    <a href="javascript:;" class="btn default"> Cancelar </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- END CHANGE PASSWORD TAB -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PROFILE CONTENT -->
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT BODY -->
+
+
+    <script src="${pageContext.request.contextPath}/assets/Javascript/jquery.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/js.cookie.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/jquery.slimscroll.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/jquery.blockui.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/bootstrap-switch.min.js" type="text/javascript"><!-- --></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="${pageContext.request.contextPath}/assets/Javascript/bootstrap-fileinput.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/jquery.sparkline.min.js" type="text/javascript"><!-- --></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="${pageContext.request.contextPath}/assets/Javascript/app.min.js" type="text/javascript"><!-- --></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="${pageContext.request.contextPath}/assets/Javascript/profile.min.js" type="text/javascript"><!-- --></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="${pageContext.request.contextPath}/assets/Javascript/layout.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/demo.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/quick-sidebar.min.js" type="text/javascript"><!-- --></script>
+    <script src="${pageContext.request.contextPath}/assets/Javascript/quick-nav.min.js" type="text/javascript"><!-- --></script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+    </body>
+
+    </html>
+</jsp:root>

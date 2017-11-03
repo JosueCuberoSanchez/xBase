@@ -1,0 +1,159 @@
+<students>
+
+  <student>
+      <studentId>B50031</studentId>
+      <username>marianaabellan4@gmail.com</username>
+      <name>Mariana</name>
+      <firstLastName>Abellán</firstLastName>
+      <secondLastName>Jiménez</secondLastName>
+      <birthdate>1997-06-11</birthdate>
+      <password>basesRocks1</password>
+      <enabled>false</enabled>
+  </student>
+
+  <student>
+      <studentId>B50120</studentId>
+      <username>mir23cr@gmail.com</username>
+      <name>Vladimir</name>
+      <firstLastName>Aguilar</firstLastName>
+      <secondLastName>Corrales</secondLastName>
+      <birthdate>1994-05-03</birthdate>
+      <password>tiquetey2medio</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B53113</studentId>
+      <username>dgonzalez081292@gmail.com</username>
+      <name>David</name>
+      <firstLastName>González</firstLastName>
+      <secondLastName>Pérez</secondLastName>
+      <birthdate>1995-12-08</birthdate>
+      <password>blabla123</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B42190</studentId>
+      <username>jo96cube@gmail.com</username>
+      <name>Josue</name>
+      <firstLastName>Cubero</firstLastName>
+      <secondLastName>Sanchez</secondLastName>
+      <birthdate>1996-06-06</birthdate>
+      <password>ramyacotamiento3</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B40420</studentId>
+      <username>alonso.garita@gmail.com</username>
+      <name>Alonso</name>
+      <firstLastName>Garita</firstLastName>
+      <secondLastName>Centeno</secondLastName>
+      <birthdate>1995-0-10</birthdate>
+      <password>josueBieber7</password>
+      <enabled>false</enabled>
+  </student>
+
+  <student>
+      <studentId>B40069</studentId>
+      <username>ian.duran60@gmail.com</username>
+      <name>Ian
+      </name>
+      <firstLastName>Duran</firstLastName>
+      <secondLastName>Gregory</secondLastName>
+      <birthdate>1995-11-24</birthdate>
+      <password>morgothrules666</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B14058</studentId>
+      <username>carlosmellado8194@hotmail.com</username>
+      <name>Carlos Luis</name>
+      <firstLastName>Mellado</firstLastName>
+      <secondLastName>Xatruch</secondLastName>
+      <birthdate>1996-06-25</birthdate>
+      <password>dsfw1fsq</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B55204</studentId>
+      <username>paola@saborio.org</username>
+      <name>Paola Jeannyna</name>
+      <firstLastName>Ortega</firstLastName>
+      <secondLastName>Saborio</secondLastName>
+      <birthdate>1996-06-25</birthdate>
+      <password>paola123</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B20051</studentId>
+      <username>rodrigo.acuna.f@gmail.com</username>
+      <name>Rodrigo Alberto</name>
+      <firstLastName>Acuna</firstLastName>
+      <secondLastName>Fernandez</secondLastName>
+      <birthdate>1995-08-28</birthdate>
+      <password>rodrigo123</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B51162</studentId>
+      <username>alexiacr@hotmail.com</username>
+      <name>Alexia Marie</name>
+      <firstLastName>Borchgrevink</firstLastName>
+      <secondLastName>Leiva</secondLastName>
+      <birthdate>1994-10-06</birthdate>
+      <password>undostresqueso5</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B41133</studentId>
+      <username>silbrenes63@gmail.com</username>
+      <name>Silvia</name>
+      <firstLastName>Brenes</firstLastName>
+      <secondLastName>Solano</secondLastName>
+      <birthdate>1996-06-25</birthdate>
+      <password>silviabrenes1996</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B36133</studentId>
+      <username>josuecr.288@gmail.com</username>
+      <name>Josué</name>
+      <firstLastName>Rojas</firstLastName>
+      <secondLastName>Sequeira</secondLastName>
+      <birthdate>1995-08-28</birthdate>
+      <password>contraseña123</password>
+      <enabled>true</enabled>
+  </student>
+
+  <student>
+      <studentId>B22148</studentId>
+      <username>majo.qbro@gmail.com</username>
+      <name>Maria José</name>
+      <firstLastName>Cubero</firstLastName>
+      <secondLastName>Hidalgo</secondLastName>
+      <birthdate>1994-10-06</birthdate>
+      <password>maria123</password>
+      <enabled>true</enabled>
+  </student>
+
+<student>
+    <studentId>B43405</studentId>
+    <username>jmhc1995@hotmail.com</username>
+    <name>José Miguel</name>
+    <firstLastName>Hidalgo</firstLastName>
+    <secondLastName>Campos</secondLastName>
+    <birthdate>1995-08-24</birthdate>
+    <password>tehlu123</password>
+    <enabled>true</enabled>
+
+</student>
+
+</students>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>xBase</title>
+		<script type="text/javascript" async
+				src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+		</script>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Plataforma de ejercicios xBase" />
+		<meta name="keywords" content="xBase, Ejercicios, UCR, Bases" />
+		<link rel="shortcut icon" href="favicon.ico" type="images/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="CSS/styleEditAnswer.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body class="homepage">			
+   		<img src="Resources/Images/LogoAdminMin.png" alt="" class="logo"/> 	
+		<nav class="nav">
+			<ul>								
+ 				<li><a href="#">Logout</a></li>
+				<li><div>|</div></li>					
+				<li><a href="#">Account</a></li>
+				<li><a href="#">Dashboard</a></li>
+ 				<li><a href="#">Users</a></li>
+			</ul>
+		</nav>  
+		<section class="detail">   			
+   		</section>
+		<section class="foot">    						  	
+			<div class="subtitle">Current answer:</div>
+  			<div class="canswer">El modelo estándar tiene tres constantes de acoplamiento por cada grupo de simetría SUcolor(3), SUlevógiro(2), Uyukawa(1): g3, g' y g respectivamente. Alternativamente a g y g' se pueden definir a partir del ángulo de mezcla electrodébil y la carga elemental.</div>
+  			<div class="subtitle">From:</div>
+  			<a href="#">
+   				<div class="results">   									
+				  	<div class="enunciados">
+   						Hallar el área de la región limitada entre las dos curvas definidas por...
+   					</div>   
+   					<div class="info">   
+  							<div class="topcont">   						   							 					
+   								<div class="difficultyE">
+   								</div>
+   								<div class="SOLVEDH">
+   								SOLVED
+   								</div>
+  							</div>
+   						<div class="rating">
+   							<span>☆</span><span>★</span><span>★</span><span>★</span><span>★</span>
+   						</div>	
+   					</div>									
+				</div>    		
+   			</a>
+   		</section>
+   		<div class="wrapper">
+  		<textarea type="text" class="edittxt">Write the new answer here</textarea>  
+  		<div class="options">
+ 				<div class="dropdown">
+  				<button class="dropbtn">T</button>
+  				<div class="dropdown-content">
+  				  <a href="#">Numérico</a>
+  				  <a href="#">Texto</a>
+  				  <a href="#">Codigo</a>
+  				  <input class="base" type="number" placeholder="Base numérica">
+				  <input class="leng" type="text" placeholder="Lenguaje">
+  				</div></div>
+  				<img id="procico" onclick="showProc()" src="Resources/Images/Procedure.png" alt="" class="icos"/><br/>
+  				<img id="visico" onclick="vis()" src="Resources/Images/Visibility.png" alt="" class="icos"/><br/>
+ 				<img src="Resources/Images/UploadPic.png" alt="" class="icos"/>
+  			</div>
+  		</div> 
+  		<div id="proccomp" class="proc">
+  			<textarea type="text" class="edittxt2">Write the new procedure here</textarea> 
+  			<img src="Resources/Images/UploadPic.png" alt="" class="icoscomp"/>
+  		</div>		
+  		<div class="contop">
+  		<a href="#" class="accept">Guardar</a><a href="#" class="reject">Descartar</a>  	  			
+  		</div> 
+  		<script>
+			var s1 = false;
+			function showProc() {
+				var element = document.getElementById('proccomp'),
+    			style = window.getComputedStyle(element),
+    			h = style.getPropertyValue('height');
+				if(s1==true){	
+					s1=false;
+					document.getElementById("procico").style.backgroundColor = "#868686";
+    				document.getElementById("proccomp").style.height = "0px";								
+					document.getElementById("proccomp").style.visibility = "hidden";
+				}else{
+					s1=true;
+					document.getElementById("procico").style.backgroundColor = "#0086cb";
+					document.getElementById("proccomp").style.visibility = "visible";
+    				document.getElementById("proccomp").style.height = "210px";
+				}
+			}
+			var s2 = false;
+			function vis() {
+				var element = document.getElementById('visico'),
+    			style = window.getComputedStyle(element),
+    			h = style.getPropertyValue('background-color');
+				if(s2==false){	
+					s2=true;
+					document.getElementById("visico").style.backgroundColor = "#868686";
+				}else{	
+					s2=false;
+					document.getElementById("visico").style.backgroundColor = "#0086cb";   
+				}
+			}
+		</script> 		
+    </body>
+</html>

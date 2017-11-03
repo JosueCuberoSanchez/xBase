@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsp:root
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns="http://www.w3.org/1999/xhtml"
+        version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="true" />
+    <jsp:output doctype-root-element="HTML"
+                doctype-system="about:legacy-compat" />
+    <html lang="en">
+    <head>
+        <title>xBase</title><!-- -->
+        <script type="text/javascript" async=""
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"><!-- -->
+        </script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Plataforma de ejercicios xBase" />
+        <meta name="keywords" content="xBase, Ejercicios, UCR, Bases" />
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico" type="images/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/styleEditAnswer.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    </head>
+    <body class="homepage">
+    <a href="${pageContext.request.contextPath}/admin/dashboard.html">
+        <img src="${pageContext.request.contextPath}/assets/Images/LogoAdminMin.png" alt="" class="logo"/>
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/logout.html">Salir</a></li>
+            <li><div>|</div></li>
+            <li><a href="${pageContext.request.contextPath}/admin/admin.html">Cuenta</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/dashboard.html">Página Principal</a></li>
+            <li><a href="${pageContext.request.contextPath}/admin/studentList.html">Estudiantes</a></li>
+        </ul>
+    </nav>
+    <section class="detail"><!-- hacer algo con el path-->
+    </section>
+    <section class="foot">
+        <div class="subtitle">Respuesta actual:</div>
+        <c:choose>
+        <c:when test="${answer.type eq 'TEXT'}">
+            <div class="canswer">${answer}</div>
+        </c:when>
+        <c:when test="${answer.type eq 'IMAGE'}">
+            ${answer.imagePath}<!-- hacer algo con el path-->
+        </c:when>
+        <c:when test="${answer.type eq 'NUMERIC'}">
+            ${answer.numericalAnswer} ${answer.unit}
+        </c:when>
+
+        <c:when test="${answer.type eq 'CODE'}">
+            Código Fuente:<br><!-- --></br> ${answer.sourceCode}<br><!-- --></br> Lenguaje: ${answer.programmingLanguage}
+        </c:when>
+        </c:choose>
+        <div class="subtitle">De:</div>
+        <a href="${pageContext.request.contextPath}/admin/adminExercise.html?exercise=${exercise.id}">
+            <div class="results">
+                <div class="enunciados">
+                    ${exercise.problem}
+                </div>
+                <div class="info">
+                    <div class="topcont">
+                        <div class="difficultyE">${exercise.difficulty}</div>
+                        <div class="SOLVEDH">
+                            SOLVED
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <c:set var="rating" value="${exercise.averageRating}"/>
+                        <c:forEach begin="1" end="5" step="1" var="i">
+                            <c:choose>
+                                <c:when test="${i le rating}" >
+                                    <span>★</span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span>☆</span>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+    <div class="wrapper">
+        <textarea name="text" class="edittxt">Escriba la nueva respuesta acá</textarea>
+        <div class="options">
+ 				<div class="dropdown">
+  				<button class="dropbtn">T</button>
+  				<div class="dropdown-content">
+  				  <a href="#">Numérico</a>
+  				  <a href="#">Texto</a>
+  				  <a href="#">Codigo</a>
+  				  <input class="base" type="number" placeholder="Base numérica"/>
+				  <input class="leng" type="text" placeholder="Lenguaje"/>
+  				</div></div>
+  				<img id="procico" onclick="showProc()" src="${pageContext.request.contextPath}/assets/Images/Procedure.png" alt="" class="icos"/><br/>
+  				<img id="visico" onclick="vis()" src="${pageContext.request.contextPath}/assets/Images/Visibility.png" alt="" class="icos"/><br/>
+ 				<img src="${pageContext.request.contextPath}/assets/Images/UploadPic.png" alt="" class="icos"/>
+  			</div>
+    </div>
+    <div id="proccomp" class="proc">
+        <textarea name="text" class="edittxt2">Escriba el nuevo procedimiento acá</textarea>
+        <img src="${pageContext.request.contextPath}/assets/Images/UploadPic.png" alt="" class="icoscomp"/>
+    </div>
+    <div class="contop">
+        <a href="#" class="accept">Guardar</a><a href="#" class="reject">Descartar</a>
+    </div>
+    <script>
+        var s1 = false;
+        function showProc() {
+            var element = document.getElementById('proccomp'),
+                style = window.getComputedStyle(element),
+                h = style.getPropertyValue('height');
+            if(s1==true){
+                s1=false;
+                document.getElementById("procico").style.backgroundColor = "#868686";
+                document.getElementById("proccomp").style.height = "0px";
+                document.getElementById("proccomp").style.visibility = "hidden";
+            }else{
+                s1=true;
+                document.getElementById("procico").style.backgroundColor = "#0086cb";
+                document.getElementById("proccomp").style.visibility = "visible";
+                document.getElementById("proccomp").style.height = "210px";
+            }
+        }
+        var s2 = false;
+        function vis() {
+            var element = document.getElementById('visico'),
+                style = window.getComputedStyle(element),
+                h = style.getPropertyValue('background-color');
+            if(s2==false){
+                s2=true;
+                document.getElementById("visico").style.backgroundColor = "#868686";
+            }else{
+                s2=false;
+                document.getElementById("visico").style.backgroundColor = "#0086cb";
+            }
+        }
+    </script>
+    </body>
+    </html>
+</jsp:root>

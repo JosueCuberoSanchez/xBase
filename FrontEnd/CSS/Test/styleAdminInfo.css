@@ -1,0 +1,106 @@
+.mailLink {
+	color:blue;
+}
+
+.cuentaTexto{
+	color:#7FB2F0;
+}
+
+img.logo {
+    width: 15%;
+    height: 15%;
+    display: block;
+    /*position: fixed;*/
+    position:relative;
+    top: 55px;
+    left: 25px;
+    z-index:2;
+}
+.navbar-nav > li > a {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+/* End Fonts */
+
+.header-main {
+    background: white;
+    margin-top:-30px;
+	position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.navhead{
+
+    left:20px;
+    top:-3px;
+    /*overflow: hidden;*/
+    background-color: #ffffff;
+    /*position: fixed;*/
+    opacity: 0.9;
+    font-size: 1.5em;
+    z-index:1;
+}
+.header-main .navhead .ulhead {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 3em;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.header-main .navhead .ulhead li {
+    float: right;
+}
+
+.header-main .navhead .ulhead li a {
+    height: 2em;
+    margin-top: 1em;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.header-main .navhead .ulhead  li div {
+    height: 2em;
+    margin-top: 1em;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header-main .navhead .ulhead  .li1{
+    position:relative;
+    top: 33px;
+    left: 15px;
+}
+
+.header-main .navhead .ulhead  .li2{
+    position:relative;
+    top: -5px;
+    left: 15px;
+}
+
+/*.header-main .navhead .ulhead  .li3 {
+    position: relative;
+    top: 58px;
+    left: 25px;
+}*/
+
+.header-main .navhead .ulhead  .selectedmen{
+    position:relative;
+    top: 30px;
+    left: 5px;
+}
+
+/* Change the link color to #111 (black) on hover */
+.header-main .navhead .ulhead li a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+.header-main .navhead .ulhead .selectedmen{
+    border-bottom: solid 2px #000000;
+}

@@ -1,0 +1,358 @@
+<topics>
+	<topic>
+		<name>Estructuras matemáticas discretas</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Conteo</name>
+		<father>Estructuras matemáticas discretas</father>
+	</topic>
+	<topic>
+		<name>Recursividad</name>
+		<father>Estructuras matemáticas discretas</father>
+	</topic>
+	<topic>
+		<name>Teoría de números</name>
+		<father>Estructuras matemáticas discretas</father>
+	</topic>
+	<topic>
+		<name>Grafos</name>
+		<father>Estructuras matemáticas discretas</father>
+	</topic>
+	<topic>
+		<name>Regla del producto y regla de la suma</name>
+		<father>Conteo</father>
+	</topic>
+	<topic>
+		<name>Principio del palomar</name>
+		<father>Conteo</father>
+	</topic>
+	<topic>
+		<name>Permutaciones y combinaciones</name>
+		<father>Conteo</father>
+	</topic>
+	<topic>
+		<name>Progresiones aritméticas y geométricas</name>
+		<father>Recursividad</father>
+	</topic>
+	<topic>
+		<name>Teorema de inducción</name>
+		<father>Recursividad</father>
+	</topic>
+	<topic>
+		<name>Relaciones de recurrencia lineales</name>
+		<father>Recursividad</father>
+	</topic>
+	<topic>
+		<name>Divisibilidad y aritmética modular</name>
+		<father>Teoría de números</father>
+	</topic>
+	<topic>
+		<name>Números primos y Máximo Común Divisor</name>
+		<father>Teoría de números</father>
+	</topic>
+	<topic>
+		<name>Criptografía</name>
+		<father>Teoría de números</father>
+	</topic>
+	<topic>
+		<name>Terminología sobre Grafos</name>
+		<father>Grafos</father>
+	</topic>
+	<topic>
+		<name>Tipos especiales de grafos</name>
+		<father>Grafos</father>
+	</topic>
+	<topic>
+		<name>Algoritmos para grafos</name>
+		<father>Grafos</father>
+	</topic>
+	<topic>
+		<name>Espacios muestrales y eventos</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Probabilidad y Estadística</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Variables Aleatorias </name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Variables Aleatorias Discretas </name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Variables Aleatorias Continuas</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Eventos Mutuamente Excluyentes</name>
+		<father>Espacios muestrales y eventos</father>
+	</topic>
+	<topic>
+		<name>Variables Aleatorias </name>
+		<father>Probabilidad y Estadística</father>
+	</topic>
+	<topic>
+		<name>Probabilidad Condicional</name>
+		<father>Probabilidad y Estadística</father>
+	</topic>
+	<topic>
+		<name>Variables Aleatorias Discretas </name>
+		<father>Variables Aleatorias </father>
+	</topic>
+	<topic>
+		<name>Probilidad Conjunta</name>
+		<father>Probabilidad y Estadística</father>
+	</topic>
+	<topic>
+		<name>Variables Aleatorias Continuas</name>
+		<father>Variables Aleatorias </father>
+	</topic>
+	<topic>
+		<name>Distribución Binomial</name>
+		<father>Variables Aleatorias Discretas </father>
+	</topic>
+	<topic>
+		<name>Distribución Exponencial</name>
+		<father>Variables Aleatorias Continuas</father>
+	</topic>
+	<topic>
+		<name>Distribución Hipergeométrica</name>
+		<father>Variables Aleatorias Discretas </father>
+	</topic>
+	<topic>
+		<name>Distribución Normal</name>
+		<father>Variables Aleatorias Continuas</father>
+	</topic>
+	<topic>
+		<name>Distribución Geométrica </name>
+		<father>Variables Aleatorias Discretas </father>
+	</topic>
+	<topic>
+		<name>Distribución de Poisson </name>
+		<father>Variables Aleatorias Continuas</father>
+	</topic>
+	<topic>
+		<name>Teorema de Bayes</name>
+		<father>Probabilidad y Estadística</father>
+	</topic>
+	<topic>
+		<name>Esperanza de una Distribución Discreta</name>
+		<father>Variables Aleatorias Discretas </father>
+	</topic>
+	<topic>
+		<name>Espacios muestrales y eventos</name>
+		<father>Probabilidad y Estadística</father>
+	</topic>
+	<topic>
+		<name>Conteo</name>
+		<father>Probabilidad y Estadística</father>
+	</topic>
+	<topic>
+		<name>Investigación de Operaciones</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Procesos Estocásticos</name>
+		<father>Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Introducción a la Investigación de Operaciones</name>
+		<father>Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Cadenas de Markov</name>
+		<father>Procesos Estocásticos</father>
+	</topic>
+	<topic>
+		<name>Procesos de Nacimiento y Muerte</name>
+		<father>Cadenas de Markov</father>
+	</topic>
+	<topic>
+		<name>Cadenas Ergódicas</name>
+		<father>Cadenas de Markov</father>
+	</topic>
+	<topic>
+		<name>Números Aleatorios</name>
+		<father>Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Teoría de Colas</name>
+		<father>Procesos de Nacimiento y Muerte</father>
+	</topic>
+	<topic>
+		<name>Teoría de Colas Básica</name>
+		<father>Teoría de Colas</father>
+	</topic>
+	<topic>
+		<name>Programacion Lineal</name>
+		<father>Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Modelo de Redes</name>
+		<father>Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Programacion Lineal Entera</name>
+		<father>Programacion Lineal</father>
+	</topic>
+	<topic>
+		<name>Programacion Dinamica Deterministica</name>
+		<father>Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Modelos de Inventario</name>
+		<father>Introducción a la Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Probabilidad basica</name>
+		<father>Introducción a la Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Simulaciones</name>
+		<father>Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Analisis de decisiones y juegos</name>
+		<father>Investigación de Operaciones</father>
+	</topic>
+	<topic>
+		<name>Estructuras de Datos</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Relaciones de Recurrencia, Sustitución y Generalización</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Relaciones de Recurrencia, Homogénea y Particular</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Análisis de Algoritmos</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Listas</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Árboles</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Búsqueda Exhaustiva Pura</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Pilas</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Colas</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Algoritmos de búsqueda</name>
+		<father>Estructuras de Datos</father>
+	</topic>
+	<topic>
+		<name>Limites</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Derivadas</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Integrales</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Técnicas de integración</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Integral definida</name>
+		<father></father>
+	</topic>
+	<topic>
+		<name>Técnicas para el cálculo de límites</name>
+		<father>Limites</father>
+	</topic>
+	<topic>
+		<name>Límites infinitos</name>
+		<father>Limites</father>
+	</topic>
+	<topic>
+		<name>Límites trigonomtericos</name>
+		<father>Limites</father>
+	</topic>
+	<topic>
+		<name>Continuidad</name>
+		<father>Limites</father>
+	</topic>
+	<topic>
+		<name>Derivación de funciones utilizando la definición</name>
+		<father>Derivadas</father>
+	</topic>
+	<topic>
+		<name>Deriviación con formulas</name>
+		<father>Derivadas</father>
+	</topic>
+	<topic>
+		<name>Derivación logaritmica</name>
+		<father>Derivadas</father>
+	</topic>
+	<topic>
+		<name>Aplicaciones de la derivada</name>
+		<father>Derivadas</father>
+	</topic>
+	<topic>
+		<name>Derivadas de órden superior</name>
+		<father>Derivadas</father>
+	</topic>
+	<topic>
+		<name>Integral indefinida</name>
+		<father>Integrales</father>
+	</topic>
+	<topic>
+		<name>Integral trigonométrica</name>
+		<father>Integrales</father>
+	</topic>
+	<topic>
+		<name>Integral logarítmica y exponencial</name>
+		<father>Integrales</father>
+	</topic>
+	<topic>
+		<name>Fracciones parciales</name>
+		<father>Técnicas de integración</father>
+	</topic>
+	<topic>
+		<name>Por partes</name>
+		<father>Técnicas de integración</father>
+	</topic>
+	<topic>
+		<name>Sustitución trigonométrica</name>
+		<father>Técnicas de integración</father>
+	</topic>
+	<topic>
+		<name>Sustitución de la tangente del ángulo</name>
+		<father>Técnicas de integración</father>
+	</topic>
+	<topic>
+		<name>Sumas de Reimman</name>
+		<father>Integral definida</father>
+	</topic>
+	<topic>
+		<name>Teorema fundamental del cálculo</name>
+		<father>Integral definida</father>
+	</topic>
+	<topic>
+		<name>Región entre dos curvas</name>
+		<father>Integral definida</father>
+	</topic>
+</topics>

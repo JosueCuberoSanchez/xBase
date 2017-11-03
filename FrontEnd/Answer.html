@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>xBase</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="Plataforma de ejercicios xBase"/>
+    <meta name="keywords" content="xBase, Ejercicios, UCR, Bases"/>
+    <link rel="shortcut icon" href="favicon.ico" type="images/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="CSS/styleExercise.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+<body class="homepage">
+<img src="Resources/Images/LogoStudentsMin.png" alt="" class="logo"/>
+<nav class="nav">
+    <ul>
+        <li><a href="LoginStudents.html">Logout</a></li>
+        <li>
+            <div>|</div>
+        </li>
+        <li><a href="#">Account</a></li>
+        <li><a href="DashboardStudents.html">Dashboard</a></li>
+        <li><a href="#">Statistics</a></li>
+    </ul>
+</nav>
+<div class="parallax" id="ht">
+    
+    <div id="group2" class="parallax__group group2">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="tit">El
+                <div style="font-size: 0.4em; display: inline-block;">procedimiento</div>
+                <a href="#ht"><img id="id1" onClick="smoothScroll(document.getElementById('group3'))" src="Resources/Images/DOWN.png" alt=""/></a>
+            </div>
+            
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+            <img src="Resources/Images/Background.jpg" alt="" class="ip"/>
+        </div>
+    </div>
+    <div id="group3" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="proc">
+                La respuesta está donde empieza la región de las montañas de arena y acaba la de los toros, la sangre,
+                el mar y la verbena.
+
+                El país de los toros, la sangre, el mar y la verbena podría ser España, y la región de las montañas de
+                arena podría ser Marruecos, el Magreb, Arabia. Donde acaba España y empieza Marruecos podría ser el
+                estrecho de Gibraltar.
+
+                Claro que Marruecos y Magreb empiezan por «ma», Arabia lo hace por «ara», y España acaba en «ña». Y si
+                me lo hace, si se da maña, no, si me araña... ¿qué animal no me gustaría besar?»
+            </div>
+        </div>
+    </div>
+    <div id="group4" class="parallax__group group2">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="tit">La
+                <div style="font-size: 0.4em; display: inline-block;">respuesta</div>
+            </div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+            <img src="Resources/Images/Background.jpg" alt="" class="ip"/>
+        </div>
+    </div>
+    <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="sol">
+                "La araña"
+            </div>
+            <div class="end">
+                <a href="#done" class="Option" onclick="">Accept</a>
+                <div class="altOptions">
+                    <a href="#" class="opt1"><!-- --></a>
+                    <button class="button" id="myRating">Calificar</button>
+                    <div id="myPopup" class="popup">
+                        <div id="form" class="popup-form">
+                            <div>
+                                <a class="close">X</a>
+                                <h3>Calfique este ejercicio</h3>
+                                <form id="ratingsForm">
+                                    <div class="stars">
+                                        <input type="radio" name="star" class="star-1" id="star-1"/>
+                                        <label class="star-1" for="star-1">1</label>
+                                        <input type="radio" name="star" class="star-2" id="star-2"/>
+                                        <label class="star-2" for="star-2">2</label>
+                                        <input type="radio" name="star" class="star-3" id="star-3"/>
+                                        <label class="star-3" for="star-3">3</label>
+                                        <input type="radio" name="star" class="star-4" id="star-4"/>
+                                        <label class="star-4" for="star-4">4</label>
+                                        <input type="radio" name="star" class="star-5" id="star-5"/>
+                                        <label class="star-5" for="star-5">5</label>
+                                        <span></span>
+                                    </div>
+                                </form>
+                                <input type="submit" class="submit-result"/>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="opt2"><!-- --></a>
+                    <button class="button" id="myReport">Reportar</button>
+                    <div id="myReportPop" class="popup">
+                        <div class="popup-form">
+                            <div>
+                                <h3>Reporte esta respuesta</h3>
+                                Comment:<textarea rows="5" cols="80" class="reportComments"></textarea>
+                                <input type="submit"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+        window.smoothScroll = function(target) {
+            var scrollContainer = target;
+            do { //find scroll container
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
+
+            var targetY = 0;
+            do { //find the top of target relatively to the container
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
+
+            scroll = function(c, a, b, i) {
+                i++; if (i > 30) return;
+                c.scrollTop = a + (b - a) / 30 * i;
+                setTimeout(function(){ scroll(c, a, b, i); }, 20);
+            }
+            // start scrolling
+            scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        }
+</script>
+<script type="text/javascript">
+                                    var report = document.getElementById("myReportPop");
+                                    var buttonReport = document.getElementById("myReport");
+                                    var close=document.getElementByClassName("submit-result");
+
+                                    // When the user clicks the button, open the form
+                                    buttonReport.onclick = function() {
+                                        report.style.display="block";
+                                    }
+                                    close.onclick = function(){
+                                        report.style.display="none";
+                                    }
+
+</script>
+<script type="text/javascript">
+                                                                var popup = document.getElementById("myPopup");
+                                                                var buttonReport = document.getElementById("myRating");
+                                                                var close = document.getElementByClassName("submit-result");
+
+                                                                // When the user clicks the button, open the form
+                                                                buttonReport.onclick = function() {
+                                                                    popup.style.display="block";
+                                                                }
+
+                                                                close.onclick = function(){
+                                                                    popup.style.display="none";
+                                                                }
+
+
+</script>
+</body>
+</html>

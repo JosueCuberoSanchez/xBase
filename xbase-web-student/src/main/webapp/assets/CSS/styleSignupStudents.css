@@ -1,0 +1,178 @@
+
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+html {
+    background: url(../Images/Background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:#ffffff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#ffffff;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#ffffff;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#ffffff;
+}
+:-ms-input-placeholder { /* Microsoft Edge */
+    color:#ffffff;
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    width: 100%;
+    font-family: 'Open Sans', serif;
+    /*font-size:30;*/
+}
+img.logo {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 32px;
+    z-index:2;
+}
+
+img.nomore{
+    position: absolute;
+    top: 40%;
+    right: 10px;
+}
+.log{
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    left: 105px;
+    color: #ffffff;
+
+}
+input.inText {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    color:#ffffff;
+    width : 300px;
+    border: hidden;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+input.inNum {
+    display:inline-block;
+    color:#ffffff;
+    width : 70px;
+    height: 20px;
+    border: hidden;
+    border-left: 1px solid #ffffff;
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    float: left;
+}
+.date{
+    display:inline-block;
+    width: 300px;
+}
+button.mSubmit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18px;
+    width : 300px;
+    height: 80px;
+    background: #262626;
+    border: hidden;
+    border-radius: 0;
+    -webkit-appearance: none;
+    text-align: center;
+    color: #FFFFFF;
+}
+button.mSubmit:hover{
+    background: #ffffff;
+    color: #219cd5
+}
+button, input, select, textarea :active {
+    outline: none;
+}
+
+button, input, select, textarea {
+    font-family: 'Open Sans', serif;
+    font-size   : 15px;
+}
+.detail{
+    width: 450px;
+    background: #219cd5;
+    position:absolute;
+    left: 30px;
+    height: 100%;
+    opacity: 1.0;
+    bottom:0;
+    z-index: -1;
+}
+.foot{
+    width: 300px;
+    height: 100%;
+    display: block;
+    background-color: transparent;
+    position:absolute;
+    bottom:0;
+    left: 55px;
+
+}
+.nav{
+    overflow: hidden;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 1em;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 3em;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    height: 2em;
+    margin-top: 1em;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+p.error{
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    color: #000000;
+    font-size: 0.8em;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}

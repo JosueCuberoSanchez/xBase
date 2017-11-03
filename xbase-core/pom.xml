@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>cr.ac.ucr.ecci.ci1312.xbase</groupId>
+    <artifactId>xbase</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  
+  <packaging>jar</packaging>
+  
+  <artifactId>xbase-core</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>xbase-core</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <jdbc.schema>xbase</jdbc.schema>
+    <jdbc.base.url>jdbc:mysql://${jdbc.host}:3306/${jdbc.schema}</jdbc.base.url>
+    <jdbc.url>${jdbc.base.url}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</jdbc.url>
+    <jdbc.base.url.noschema>jdbc:mysql://${jdbc.host}:3306</jdbc.base.url.noschema>
+    <jdbc.username>xbase</jdbc.username>
+    <jdbc.password>password</jdbc.password>
+    <jdbc.host>localhost</jdbc.host><!-- Cambiar cuando vayamos a usar el servidor -->
+    
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- JDBC Driver & Hibernate Properties -->
+    <jdbc.groupId>mysql</jdbc.groupId>
+    <jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
+    <jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
+    <jdbc.version>5.1.40</jdbc.version>
+
+    <hibernate.dialect>org.hibernate.dialect.MySQL5InnoDBDialect</hibernate.dialect>
+    <alters.sql>src/main/resources/mysql.sql</alters.sql>
+
+    <hibernate.version>4.3.1.Final</hibernate.version>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.5</version>
+    </dependency>
+    
+    <!-- Hibernate -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${hibernate.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>asm</groupId>
+          <artifactId>asm</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>asm</groupId>
+          <artifactId>asm-attrs</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>cglib</groupId>
+          <artifactId>cglib</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-c3p0</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>${hibernate.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-search</artifactId>
+      <version>4.5.0.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache-core</artifactId>
+      <version>2.6.6</version>
+    </dependency>
+
+    <!-- JDBC -->
+    <dependency>
+      <groupId>${jdbc.groupId}</groupId>
+      <artifactId>${jdbc.artifactId}</artifactId>
+      <version>${jdbc.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.amazonaws</groupId>
+      <artifactId>aws-java-sdk</artifactId>
+      <version>1.11.69</version>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.codehaus.jackson</groupId>
+          <artifactId>jackson-core-asl</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.codehaus.jackson</groupId>
+          <artifactId>jackson-mapper-asl</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+      <!-- https://mvnrepository.com/artifact/xom/xom -->
+    <dependency>
+      <groupId>xom</groupId>
+      <artifactId>xom</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.lowagie</groupId>
+      <artifactId>itext</artifactId>
+      <version>2.1.7</version>
+    </dependency>
+
+    <!-- Needed for IText PDF View -->
+    <dependency>
+      <groupId>com.itextpdf</groupId>
+      <artifactId>itextpdf</artifactId>
+      <version>5.5.9</version>
+    </dependency>
+
+
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    
+    <plugins>
+      <plugin>
+        <groupId>de.juplo</groupId>
+        <artifactId>hibernate-maven-plugin</artifactId>
+        <version>2.0.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>create</goal>
+            </goals>
+          </execution>
+        </executions>
+         <configuration>
+             <skip>false</skip>
+         </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

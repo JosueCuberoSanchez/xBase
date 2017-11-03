@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xbase-core" />
+        <module name="xbase-web-admin" />
+        <module name="xbase-web-student" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xbase" target="1.8" />
+      <module name="xbase-core" target="1.8" />
+      <module name="xbase-web-admin" target="1.8" />
+      <module name="xbase-web-student" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
